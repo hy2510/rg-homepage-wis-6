@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://pcdn2.swing2app.co.kr/swing_public_src/v3/2024_02_28_002/js/swing_app_on_web.js"></script>
+    <script src="https://pcdn2.swing2app.co.kr/swing_public_src/custom_proj/reading_gate_proj/js/reading_gate_inapp_api_handler.js?date=20240926_v6"></script>
+
+    <script>
+        var rgIapInterface = null;
+
+        function buyTest()
+        {
+            // 앱에서 인앱 구독 결제 실행 코드
+            rgIapInterface = new RgIapInterface();
+            rgIapInterface.init();
+
+            // 현재 등록된 상품 아이디(android)
+            // 1개월 정기결제(자동갱신) : rg.1m.sub
+            // 1개월 이용권 결제(비갱신) : rg.1m.nonsub0
+            // 3개월 이용권 결제(비동갱신) : rg.3m.nonsub
+            // 6개월 이용권(비갱신) : rg.6m.nonsub
+            // 1년 이용권(비갱신) : rg.12m.nonsub
+
+            // 현재 등록된 상품 아이디(ios)
+            // 1개월 정기결제(자동갱신) : rg.1m.sub
+            // 1개월 이용권 결제(비갱신) : rg.1m.nonsub
+            // 3개월 이용권 결제(비동갱신) : rg.3m.nonsub
+            // 6개월 이용권(비갱신) : rg.6m.nonsub
+            // 1년 이용권(비갱신) : rg.12m.nonsub
+
+
+            // platform 구분 코드 api 정보는 아래의 URL 를 참고하시면 됩니다.
+            // https://documentation.swing2app.co.kr/developer/webview/javascript-api#get-platform-info
+            var platformCode = swingWebViewPlugin.app.methods.getCurrentPlatform();
+            // todo 구매할 상품 아이디를 매핑해서 실행해주세요
+            rgIapInterface.subscribe("rg.1m.sub",platformCode, function(returnModel) {
+                if (returnModel.result ) {
+                    // 구독 성공
+                    if( platformCode == 'android')
+                    {
+                        // android return Model Data scheme
+                        // returnModel = {
+                        //     result : true,
+                        //     purchaseToken : purchaseToken,
+                        //     productId : productId
+                        // }
+
+                        console.log( 'original data : ' + JSON.stringify(returnModel.originalData) );
+
+                        // 값 예시 returnModel.originalData
+                        // [{
+                        //     "orderId": "GPA.3355-4848-8386-49751",
+                        //     "packageName": "com.hustay.swing.dededae603d0b4850bac7d4209309ce94",
+                        //     "productId": "testpd1",
+                        //     "purchaseTime": 1668091465146,
+                        //     "purchaseState": 0,
+                        //     "purchaseToken": "oljaodejfekfnhiddnefhmen.AO-J1OyIDgeuh3_XLdbmMaptYo81FidgEn3_n3zozmMfj4DqOn51RXY5U_XSeFOpDO4UplBiKsc59SVoPQjcp-jVTllJK_3P2ZMsPdzzBouc14jXN7DVLAg7tOFvKLjQ--HfGzIHpgKB",
+                        //     "quantity": 1,
+                        //     "acknowledged": false
+                        // }]
+
+
+                        // todo 이 외에 다른 상세정보를 얻고싶다면 아래의 코드를 호출하시면 됩니다.
+                        rgIapInterface.getSubInfo('android',{
+                                'token' : returnModel.purchaseToken,
+                                'subscription_id' : returnModel.productId
+                            },'N',
+                            function(model) {
+                                // model 의 결과값은 아래와 같습니다.
+
+                                if( model.resultMap.responseCode == 200 ) // 성공
+                                {
+                                    // {
+                                    //     "resultMap": {
+                                    //         "lineItems": [
+                                    //             {
+                                    //                 "productId": "rg.1m.nonsub0",
+                                    //                 "expiryTime": "2024-09-26T06:17:46.193Z",
+                                    //                 "prepaidPlan": {},
+                                    //                 "offerDetails": {
+                                    //                     "basePlanId": "rg-1m-nonsub-plan"
+                                    //                 }
+                                    //             }
+                                    //         ],
+                                    //         "regionCode": "KR",
+                                    //         "kind": "androidpublisher#subscriptionPurchaseV2",
+                                    //         "acknowledgementState": "ACKNOWLEDGEMENT_STATE_PENDING",
+                                    //         "subscriptionState": "SUBSCRIPTION_STATE_EXPIRED",
+                                    //         "startTime": "2024-09-26T06:13:41.676Z",
+                                    //         "latestOrderId": "GPA.3354-6205-7667-56107",
+                                    //         "testPurchase": {},
+                                    //         "responseCode": 200
+                                    //     }
+                                    // }
+
+                                }
+                                else    // 실패
+                                {
+                                    // {
+                                    //     "resultMap": {
+                                    //         "error": {
+                                    //             "code": 410,
+                                    //                 "message": "The purchase token is no longer valid.",
+                                    //                 "errors": [
+                                    //                 {
+                                    //                     "message": "The purchase token is no longer valid.",
+                                    //                     "domain": "androidpublisher",
+                                    //                     "reason": "purchaseTokenNoLongerValid"
+                                    //                 }
+                                    //             ]
+                                    //         },
+                                    //         "responseCode": 410
+                                    //     }
+                                    // }
+                                }
+                            })
+
+
+                        // 안드로이드는 반드시 구독 확정을 해줘야 합니다.
+                        // 구독 확정 호출코드
+                        rgIapInterface.subscribeAcknowledgeForAnd(returnModel.purchaseToken,
+                            returnModel.productId,function (model) {
+                                // 구독 확정 성공
+
+                            }, function() {
+                                // 구독 확정 실패
+                            });
+
+                        // todo 아래의 값을 서버에 저장해주세요. 구독 정보를 가져올때 활용됨
+                        var purchaseToken = returnModel.purchaseToken;
+                        var productId = returnModel.productId;
+
+                    }
+                    else if (platformCode == 'ios')
+                    {
+                        // ios return Model Data scheme
+                        // returnModel = {
+                        //     result : true,
+                        //     receipt : receipt,
+                        //     transactionId : transactionIdentifier,
+                        //     productId : productId
+                        // }
+
+                        // todo 아래의 값을 서버에 저장해주세요. 구독 정보를 가져올때 활용됨
+                        var receipt = returnModel.receipt;
+                        var transactionId = returnModel.transactionId;
+                        var productId = returnModel.productId;
+
+                        console.log( 'original data : ' + JSON.stringify(returnModel.originalData) );
+
+                        // 값 예시 returnModel.originalData
+                        // {\"transaction\":{\"transactionIdentifier\":\"2000000524327453\"},\"productId\":\"swbwregsubweek\",\"needsFinishTransaction\":false,\"originalTransaction\":{\"transactionIdentifier\":null},\"receipt\":\"=test=\",\"quantity\":1}
+
+                        // 아래의 API 는 활성화된 구독정보만 조회가 가능합니다.
+                        // todo 이 외 상세정보를 얻고싶다면 아래의 코드를 호출하시면 됩니다.( Server Side API 로 데이터를 가져오는 정보 )
+                        var isTestMode = 'N'; //  테스트 환경인 경우 Y, 아닌 경우 N ( 배포전이라면 Y 으로 셋팅 )
+                        rgIapInterface.getSubInfo('ios',{
+                                'transaction_id' : transactionId
+                            },isTestMode,
+                            function(model) {
+                                // model 의 결과값은 아래와 같습니다.
+                                console.log('return from api : ' + JSON.stringify(model));
+
+                                // model 값 예시
+                                // {
+                                //     "environment": "Sandbox",
+                                //     "data": [
+                                //     {
+                                //         "subscriptionGroupIdentifier": "21493066",
+                                //         "lastTransactions": [
+                                //             {
+                                //                 "originalTransactionId": "2000000721739731",
+                                //                 "status": 2, // 1 자동 갱신 구독이 활성 상태입니다. 2 자동 갱신 구독이 만료되었습니다. 3 자동 갱신 구독이 결제 재시도 기간에 있습니다. 4 자동 갱신 구독이 결제 유예 기간에 있습니다. 5 자동 갱신 구독이 취소되었습니다. App Store에서 거래를 환불하거나 가족 공유에서 취소되었습니다.
+                                //                 "signedTransactionInfo": {
+                                //                     "transactionId": "2000000722923843",
+                                //                     "originalTransactionId": "2000000721739731",
+                                //                     "webOrderLineItemId": "2000000075182096",
+                                //                     "bundleId": "com.aoneedu.readinggate",
+                                //                     "productId": "rg.1m.sub",
+                                //                     "subscriptionGroupIdentifier": "21493066",
+                                //                     "purchaseDate": 1727157347000,
+                                //                     "originalPurchaseDate": 1727073410000,
+                                //                     "expiresDate": 1727157647000,
+                                //                     "quantity": 1,
+                                //                     "type": "Auto-Renewable Subscription",
+                                //                     "inAppOwnershipType": "PURCHASED",
+                                //                     "signedDate": 1727161548155,
+                                //                     "environment": "Sandbox",
+                                //                     "transactionReason": "RENEWAL",
+                                //                     "storefront": "KOR",
+                                //                     "storefrontId": "143466",
+                                //                     "price": 30000000,
+                                //                     "currency": "KRW"
+                                //                 },
+                                //                 "signedRenewalInfo": {
+                                //                     "expirationIntent": 1,
+                                //                     "originalTransactionId": "2000000721739731",
+                                //                     "autoRenewProductId": "rg.1m.sub",
+                                //                     "productId": "rg.1m.sub",
+                                //                     "autoRenewStatus": 0,
+                                //                     "isInBillingRetryPeriod": false,
+                                //                     "signedDate": 1727161548155,
+                                //                     "environment": "Sandbox",
+                                //                     "recentSubscriptionStartDate": 1727153609000,
+                                //                     "renewalDate": 1727157647000
+                                //                 }
+                                //             }
+                                //         ]
+                                //     }
+                                // ],
+                                //     "bundleId": "com.aoneedu.readinggate"
+                                // }
+
+                            },
+                            function(result)
+                            {
+                                // result 값 예시
+                                // {"errorMessage":"Transaction id not found.","errorCode":4040010,"responseCode":404}
+
+                            }
+                        );
+
+
+                        // 아래의 API 는 활성화 및 비활성화된 구독정보 모두 조회가 가능합니다.
+                        rgIapInterface.getIosTransactionInfo('ios',{
+                                'transaction_id' : transactionId
+                            },'Y',
+                            function(model) {
+                                // model 의 결과값은 아래와 같습니다.
+                                // {
+                                //     "resultMap": {
+                                //         "signedTransactionInfo": {
+                                //             "transactionId": "2000000725449829",
+                                //                 "originalTransactionId": "2000000725449829",
+                                //                 "bundleId": "com.aoneedu.readinggate",
+                                //                 "productId": "rg.1m.nonsub",
+                                //                 "purchaseDate": 1727316546000,
+                                //                 "originalPurchaseDate": 1727316546000,
+                                //                 "quantity": 1,
+                                //                 "type": "Non-Renewing Subscription",
+                                //                 "inAppOwnershipType": "PURCHASED",
+                                //                 "signedDate": 1727336449793,
+                                //                 "environment": "Sandbox",
+                                //                 "transactionReason": "PURCHASE",
+                                //                 "storefront": "KOR",
+                                //                 "storefrontId": "143466",
+                                //                 "price": 30000000,
+                                //                 "currency": "KRW"
+                                //         },
+                                //         "responseCode": 200
+                                //     },
+                                //     "transactionInfo": {
+                                //         "inAppOwnershipType": "PURCHASED",
+                                //             "purchaseDate": 1727316546000,
+                                //             "quantity": 1,
+                                //             "productId": "rg.1m.nonsub",
+                                //             "bundleId": "com.aoneedu.readinggate",
+                                //             "storefrontId": "143466",
+                                //             "type": "Non-Renewing Subscription",
+                                //             "transactionId": "2000000725449829",
+                                //             "transactionReason": "PURCHASE",
+                                //             "environment": "Sandbox",
+                                //             "originalTransactionId": "2000000725449829",
+                                //             "price": 30000000,
+                                //             "signedDate": 1727336449793,
+                                //             "currency": "KRW",
+                                //             "originalPurchaseDate": 1727316546000,
+                                //             "storefront": "KOR"
+                                //     }
+                                // }
+
+                            },
+                            function(result) {
+                                // {
+                                //     "errorMessage": "Transaction id not found.",
+                                //     "errorCode": 4040010,
+                                //     "responseCode": 404
+                                // }
+                            }
+                        );
+
+                    }
+
+                } else {
+                    // 구독 실패
+                }
+            });
+
+        }
+
+
+    </script>
+</head>
+<body>
+
+<div style="padding: 30px">
+    <button onclick="buyTest()" style="font-size: 30px">구매 테스트</button>
+</div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      const WEEKS = ['일', '월', '화', '수', '목', '금', '토']
+      const makeHtmlElement = function (tagName, ...attr) {
+        const element = document.createElement(tagName)
+        for (let prop of attr) {
+          const [key, value] = Object.entries(prop)[0]
+          if (key == 'textContent' || key == 'innerText') {
+            element.textContent = value
+          } else {
+            element.setAttribute(key, value)
+          }
+        }
+        return element
+      }
+
+      function makeListItem(item) {
+        const container = makeHtmlElement('div', { class: 'container' })
+        const title = makeHtmlElement('div')
+
+        const date = new Date(
+          `${item.Date.substring(0, 4)}-${item.Date.substring(4, 6)}-${item.Date.substring(6, 8)}`,
+        )
+
+        const titleText = `${date.getFullYear()}. ${date.getMonth() + 1}. ${date.getDate()} (${WEEKS[date.getDay()]}): ${item.Sum}`
+        title.append(titleText)
+
+        const details = item.List.map((i) => {
+          const itemText = ` - ${i.ServerType}: ${i.CNT}`
+          const item = makeHtmlElement('p', { style: `margin: 0px;` })
+          item.append(itemText)
+          return item
+        })
+        container.append(title, ...details)
+
+        return container
+      }
+
+      function listup(items) {
+        const divHistory = document.getElementById('history')
+        divHistory.innerHTML = ''
+
+        items.sum.forEach((sum) => {
+          const container = makeHtmlElement('li')
+          container.append(makeListItem(sum))
+          divHistory.append(container)
+        })
+      }
+
+      function getCounter(p1, p2) {
+        fetch(`http://localhost:4000/v1/demo/count?p1=${p1}&p2=${p2}&type=gg`)
+          .then((res) => {
+            if (res.ok) {
+              return res.json()
+            }
+          })
+          .then((data) => {
+            listup(data)
+          })
+      }
+
+      function getDateString(date) {
+        return `${date.getFullYear()}-${date.getMonth() < 9 ? `0${date.getMonth() + 1}` : date.getMonth() + 1}-${date.getDate() <= 9 ? `0${date.getDate()}` : date.getDate()}`
+      }
+
+      function initData() {
+        setDataAndSearch(1)
+      }
+
+      function setDataAndSearch(dayDistance) {
+        const today = new Date()
+        const todayText = getDateString(today)
+        const yesterday = new Date()
+        yesterday.setDate(yesterday.getDate() - dayDistance)
+        const yesterdayText = getDateString(yesterday)
+
+        const stdate = document.getElementById('stdate')
+        const enddate = document.getElementById('enddate')
+        stdate.value = yesterdayText
+        enddate.value = todayText
+
+        getCounter(
+          stdate.value.replace(/-/g, ''),
+          enddate.value.replace(/-/g, ''),
+        )
+      }
+
+      function searchData() {
+        const stdate = document.getElementById('stdate')
+        const enddate = document.getElementById('enddate')
+
+        getCounter(
+          stdate.value.replace(/-/g, ''),
+          enddate.value.replace(/-/g, ''),
+        )
+      }
+    </script>
+  </head>
+  <body onload="initData()">
+    <div>
+      <div>
+        <input id="stdate" type="date" />
+        <input id="enddate" type="date" />
+        <button onclick="searchData()">검색</button>
+        <button onclick="setDataAndSearch(7)">7일 검색</button>
+      </div>
+      <div>
+        <ul id="history"></ul>
+      </div>
+    </div>
+  </body>
+</html>
