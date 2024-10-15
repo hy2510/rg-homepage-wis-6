@@ -118,6 +118,39 @@
         }
       }
     }
+    .title_copy_box {
+      margin: auto;
+      width: fit-content;
+      position: relative;
+      &.copy_icon {
+        position: relative;
+        &::after {
+          content: '';
+          width: 8px;
+          height: 8px;
+          position: absolute;
+          top: -2px;
+          right: -8px;
+          background-image: url('/src/images/@book-cover/copy.svg');
+          background-size: 8px;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+      }
+      .book_title {
+        cursor: pointer;
+        width: 100%;
+        max-width: 120px;
+        margin: auto;
+        color: var(--black);
+        text-align: center; 
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: var(--text-s);
+        // font-weight: 600;
+      }
+    }
   }
 }
 

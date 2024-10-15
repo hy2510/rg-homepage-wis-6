@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { useStyle } from '@/ui/context/StyleContext'
 import InProgress from '../InProgress'
 import { BookInfoModal } from './BookInfoModal'
+import { useState } from 'react'
 
 const STYLE_ID = 'book_cover'
 
@@ -95,6 +96,32 @@ export function BookCover({
 
   const isShowPoint = earnPoint !== undefined
   const coverPoint = earnPoint || 0
+
+  const [copyMessage, setCopyMessage] = useState(false);
+
+  const handleCopy = () => {
+    const textToCopy = title;
+    const tempInput = document.createElement('input');
+
+    setCopyMessage(true);
+    setTimeout(() => {
+      setCopyMessage(false);
+    }, 1000)
+
+    // 임시 입력 필드에 텍스트 설정
+    tempInput.value = textToCopy;
+    document.body.appendChild(tempInput);
+
+    // 텍스트 선택 및 복사
+    tempInput.select();
+    tempInput.setSelectionRange(0, 99999);
+    document.execCommand('copy');
+
+    // 임시 입력 필드 삭제
+    document.body.removeChild(tempInput);
+
+    // alert('Book title copied.');
+  };
 
   return (
     <>
@@ -196,6 +223,12 @@ export function BookCover({
                 }
               }}
             />
+          </div>
+          <div className={`${style.title_copy_box} ${copyMessage ? null : style.copy_icon}`}>
+            <div onClick={() => {handleCopy()}} className={style.book_title}>
+              {/* <Image src='/src/images/@book-cover/copy.svg' width={14} height={14} alt='' /> */}
+              {copyMessage ? <span style={{color: 'var(--green)'}}>Title copied!</span> : title}
+            </div>
           </div>
           {bookCode && (
             <div className={style.tag}>
