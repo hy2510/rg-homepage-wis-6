@@ -28,14 +28,14 @@ type Category = {
 const BookSearchBarCategoryData: Category[] = [
   {
     id: 'DODO',
-    title: '기초 영어',
+    title: 'DODO ABC',
     comment: '알파벳, 파닉스 배우기',
     image: '/src/images/@book-search-bar/dodo_abc.png',
     link: SITE_PATH.LIBRARY.DODO_ABC_STUDY,
   },
   {
     id: 'PK',
-    title: '기초 영어 (classic)',
+    title: 'PRE K (classic)',
     comment: '알파벳, 파닉스 배우기',
     image: '/src/images/@book-search-bar/prek.svg',
     link: SITE_PATH.LIBRARY.PRE_K,

@@ -349,7 +349,7 @@ function GnbLogOn({
             }}
           />
           {/* 학습자의 레벨 */}
-          {studyLevel && <div className={style.user_level}>{studyLevel}</div>}
+          {studyLevel && <div className={style.user_level} onClick={() => {onClick('my')}}>{studyLevel}</div>}
         </div>
       </div>
     </>

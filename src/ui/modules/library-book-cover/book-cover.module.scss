@@ -97,6 +97,9 @@
         justify-content: center;
         align-items: center;
         gap: 8px;
+        @media (orientation: portrait) {
+          flex-direction: column;
+        }
       }
       .line {
         margin-top: 2px;
@@ -104,6 +107,9 @@
         height: 10px;
         background-color: var(--gray2);
         border-radius: 100px;
+        @media (orientation: portrait) {
+          display: none;
+        }
       }
       .point {
         color: var(--black);

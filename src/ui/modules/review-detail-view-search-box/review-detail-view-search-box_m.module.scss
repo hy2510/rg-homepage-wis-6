@@ -26,11 +26,14 @@
       display: flex;
       flex-direction: column;
       gap: var(--space-s);
+      width: 100%;
+      max-width: 950px;
       .period {
         display: flex;
         align-items: center;
         gap: var(--space-xs);
         width: calc(100vw - 70px);
+        max-width: 950px;
         .start_date,
         .end_date {
           width: 100%;
@@ -72,6 +75,7 @@
       .search_bar {
         min-height: 50px;
         width: calc(100vw - 70px);
+        max-width: 950px;
         display: flex;
         padding: var(--space-xxs) var(--space-xs);
         border-radius: var(--round-m);

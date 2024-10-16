@@ -51,6 +51,10 @@
     @media (prefers-color-scheme: no-preference) {
       border: 2px solid var(--dark-blue);
     }
+    @media (min-width: 600px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }
 
@@ -84,10 +88,12 @@
       gap: var(--space-xxs);
       position: relative;
       z-index: 1;
+      margin: auto;
       .goal_name {
         font-size: var(--text-m);
         font-weight: 700;
         padding-left: var(--space-xxs);
+        text-align: center;
         // color: #000;
       }
     }

@@ -44,6 +44,9 @@
   flex-direction: column;
   padding: var(--space-s);
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  @media (min-width: 600px) {
+    max-width: 400px;
+  }
   @media (prefers-color-scheme: no-preference) {
     background-color: #0c0541;
     border: 2px solid rgba($color: #ffffff, $alpha: 0.15);
@@ -171,6 +174,9 @@
   justify-content: center;
   padding-top: var(--space-m);
   margin-top: var(--space-l);
+  @media (min-width: 600px) {
+    flex-direction: row;
+  }
   .card {
     cursor: pointer;
     min-height: 300px;

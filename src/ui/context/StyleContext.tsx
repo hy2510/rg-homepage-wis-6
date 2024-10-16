@@ -117,5 +117,7 @@ function isMobileDetect(userAgent: string) {
   const isMobileDevice =
     /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)
   const screenWidth = screen.width < 1024
-  return isMobileDevice && screenWidth
+  const isTouchDevice = navigator.maxTouchPoints > 0;
+  const touchScreenWidth = screen.width > 300
+  return isMobileDevice && screenWidth || isTouchDevice && touchScreenWidth
 }

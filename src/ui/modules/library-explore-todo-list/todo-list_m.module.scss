@@ -8,6 +8,12 @@
     font-size: var(--text-d-1);
     font-weight: 600;
     padding-top: 5px;
+    span {
+      color: var(--gray1);
+      font-size: var(--text-s);
+      font-weight: 500;
+      margin-left: var(--space-xxs);
+    }
   }
   .row {
     display: grid;
@@ -33,7 +39,7 @@
       align-items: center;
       justify-content: center;
       border-radius: var(--round-m);
-      margin-bottom: 70px;
+      margin-bottom: 74px;
       background-color: rgba($color: #dae1ea, $alpha: 0.3);
     }
   }

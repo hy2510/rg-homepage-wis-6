@@ -57,6 +57,12 @@
       display: grid;
       grid-template-columns: repeat(1, 1fr);
       gap: var(--space-xs);
+      @media (min-width: 600px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media (min-width: 1024px) {
+        grid-template-columns: repeat(4, 1fr);
+      }
     }
     .line {
       position: relative;
@@ -85,6 +91,12 @@
       grid-template-columns: repeat(1, 1fr);
       gap: var(--space-xs);
       margin-bottom: 15vh;
+      @media (min-width: 600px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media (min-width: 1024px) {
+        grid-template-columns: repeat(4, 1fr);
+      }
     }
   }
 }

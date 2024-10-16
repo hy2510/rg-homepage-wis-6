@@ -3,6 +3,12 @@
   grid-template-columns: repeat(3, 1fr);
   align-items: end;
   gap: var(--space-s);
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  @media (min-width: 1024px) {
+      grid-template-columns: repeat(6, 1fr);
+  }
 }
 
 .quick_report_item {

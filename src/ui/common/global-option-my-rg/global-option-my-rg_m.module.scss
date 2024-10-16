@@ -963,6 +963,9 @@
     background-color: #0c0541;
     border-top: 2px solid rgba($color: #ffffff, $alpha: 0.15);
   }
+  @media (min-width: 600px) {
+    border-radius: 0 0 var(--round-l) var(--round-l);
+  }
   .txt_p {
     font-size: var(--text-l);
   }
@@ -1072,6 +1075,9 @@
   @media (prefers-color-scheme: no-preference) {
     background-color: #0c0541;
     border-top: 2px solid rgba($color: #ffffff, $alpha: 0.15);
+  }
+  @media (min-width: 600px) {
+    border-radius: 0 0 var(--round-l) var(--round-l);
   }
   .txt_p {
     font-size: var(--text-l);

@@ -258,6 +258,10 @@
   position: fixed;
   left: 0;
   bottom: 0;
+  @media (min-width: 600px) {
+    justify-content: center;
+    gap: 70px;
+  }
   @media (prefers-color-scheme: no-preference) {
     background-color: rgba($color: #0c0541, $alpha: 0.99);
     // -webkit-backdrop-filter: blur(15px);

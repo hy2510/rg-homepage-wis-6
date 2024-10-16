@@ -656,6 +656,15 @@
   left: 0;
   right: 0;
   bottom: 0;
+  @media (min-width: 600px) {
+    position: fixed;
+    z-index: 101;
+    top: 3%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%);
+  }
   .modal_container {
     width: 100vw;
     height: 100dvh;
@@ -676,9 +685,34 @@
       // border: 2px solid rgba(255, 255, 255, 0.15);
       background-color: #0c0541;
     }
+    @media (min-width: 600px) {
+      width: 500px;
+      height: fit-content;
+      min-height: 60vh;
+      max-height: 95vh;
+      background-color: var(--white);
+      border-radius: var(--round-l);
+      // color: var(--black);
+      // overflow: hidden;
+      overflow-y: auto;
+      box-shadow:
+        rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px,
+        rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px,
+        rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      margin: auto;
+      position: relative;
+    }
     &.compact {
       width: 100vw;
       height: 100dvh;
+      @media (min-width: 600px) {
+        width: 500px;
+        height: fit-content;
+        min-height: 60vh;
+        max-height: 95vh;
+      }
     }
     &.book_info {
       margin-top: calc(env(safe-area-inset-top));
@@ -698,6 +732,12 @@
       background-color: var(--white);
       @media (prefers-color-scheme: no-preference) {
         background-color: #0c0541;
+      }
+      @media (min-width: 600px) {
+        border-radius: var(--round-l) var(--round-l) 0 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
       }
       &::after {
         content: '';
@@ -750,6 +790,11 @@
       background-color: var(--white);
       @media (prefers-color-scheme: no-preference) {
         background-color: #0c0541;
+      }
+      @media (min-width: 600px) {
+        position: sticky;
+        top: 0;
+        z-index: 10;
       }
       .nav_top_back_link {
         cursor: pointer;
