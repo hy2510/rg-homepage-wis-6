@@ -49,6 +49,9 @@
       border-top: 2px solid rgba($color: #ffffff, $alpha: 0.15);
       background-color: #0c0541;
     }
+    @media (min-width: 600px) {
+      border-radius: 0 0 var(--round-l) var(--round-l);
+    }
     .streak_status {
       min-height: 100px;
       display: flex;
