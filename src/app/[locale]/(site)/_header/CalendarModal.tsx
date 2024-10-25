@@ -309,7 +309,7 @@ const CalendarUI = ({ loading: propsLoading }: { loading: boolean }) => {
 
   return (
     <>
-      <div style={{ position: 'sticky', top: 0, zIndex: 10 }}>
+      {/* <div style={{ position: 'sticky', top: 0, zIndex: 10 }}>
         <Nav>
           <NavItem
             active={isSimpleMode}
@@ -328,15 +328,15 @@ const CalendarUI = ({ loading: propsLoading }: { loading: boolean }) => {
             {t('t017')}
           </NavItem>
         </Nav>
-      </div>
+      </div> */}
       <div className={style.calendar_modal}>
         <div className={`${style.cal_header} ${monthNames[info.month - 1]}`}>
           <div className={style.cal_header_container}>
             <div className={style.current_month}>
               <div className={`${style.year_carousel} year_carousel`}>
-                <div className={'carousel_left_button'}></div>
+                {/* <div className={'carousel_left_button'}></div> */}
                 <div className={`${style.cal_year} cal_year`}>{info.year}</div>
-                <div className={'carousel_right_button'}></div>
+                {/* <div className={'carousel_right_button'}></div> */}
               </div>
               <div className={style.month_carousel}>
                 <div
@@ -544,12 +544,12 @@ const CalendarDetailModeInfo = ({
       {settingType === 'Points' && (
         <div className={style.calendar_detail_mode_info_container}>
           <div className={style.goal_point_pass}>
-            <Image
+            {/* <Image
               alt=""
               src="/src/images/@calendar-modal/point_blue.svg"
               width="18"
               height="18"
-            />
+            /> */}
             <span>{t('t019', { num: studyDays })}</span>
           </div>
           <div className={style.daily_goal_info}>
@@ -566,12 +566,12 @@ const CalendarDetailModeInfo = ({
       {settingType === 'Books' && (
         <div className={style.calendar_detail_mode_info_container}>
           <div className={style.goal_passed_pass}>
-            <Image
+            {/* <Image
               alt=""
               src="/src/images/@calendar-modal/book_blue.svg"
               width="18"
               height="18"
-            />
+            /> */}
             <span>{t('t019', { num: studyDays })}</span>
           </div>
           <div className={style.daily_goal_info}>
@@ -622,7 +622,7 @@ const CalendarDetailModeBody = ({
           onClick={() => {
             _tabButtonStatus('passed')
           }}>
-          {tabButtonStatus === 'passed' && (
+          {/* {tabButtonStatus === 'passed' && (
             <Image
               alt={''}
               src="/src/images/@calendar-modal/book_blue.svg"
@@ -637,7 +637,7 @@ const CalendarDetailModeBody = ({
               width={24}
               height={24}
             />
-          )}
+          )} */}
           <span>{t('t022')}</span>
           {tabButtonStatus === 'passed' && (
             <span>{t('t023', { num: monthlyBooks })}</span>
@@ -650,7 +650,7 @@ const CalendarDetailModeBody = ({
           onClick={() => {
             _tabButtonStatus('point')
           }}>
-          {tabButtonStatus === 'point' && (
+          {/* {tabButtonStatus === 'point' && (
             <Image
               alt={''}
               src="/src/images/@calendar-modal/point_blue.svg"
@@ -665,7 +665,7 @@ const CalendarDetailModeBody = ({
               width={24}
               height={24}
             />
-          )}
+          )} */}
           <span>{t('t476')}</span>
           {tabButtonStatus === 'point' && (
             <span>{NumberUtils.toRgDecimalPoint(monthlyPoints)}P</span>
@@ -673,6 +673,7 @@ const CalendarDetailModeBody = ({
         </div>
       </div>
       {/* 캘린더 */}
+      <CalTableHeader />
       <div className={style.cal_detail_mode_body}>
         {days.map((day, i) => {
           const dayItem =
@@ -742,7 +743,7 @@ const CalendarDetailDay = ({
             style.goal
           }`}
           style={{ opacity: `${book + point > 0 ? 1 : 0}` }}>
-          {type === 'passed' && (
+          {/* {type === 'passed' && (
             <Image
               alt={''}
               src="/src/images/@calendar-modal/book_blue.svg"
@@ -757,7 +758,7 @@ const CalendarDetailDay = ({
               width="16"
               height="16"
             />
-          )}
+          )} */}
           <span>{book}</span>
         </div>
         <div
@@ -765,7 +766,7 @@ const CalendarDetailDay = ({
             style.goal
           }`}
           style={{ opacity: `${book + point > 0 ? 1 : 0}` }}>
-          {type === 'point' && (
+          {/* {type === 'point' && (
             <Image
               alt={''}
               src="/src/images/@calendar-modal/point_blue.svg"
@@ -780,8 +781,8 @@ const CalendarDetailDay = ({
               width={16}
               height={16}
             />
-          )}
-          <span>{point}</span>
+          )} */}
+          <span>{Math.floor(point * 10) / 10}<span style={{fontSize: '10px'}}>P</span></span>
         </div>
         <div className={style.event_dots}>
           {eventReadCount && (

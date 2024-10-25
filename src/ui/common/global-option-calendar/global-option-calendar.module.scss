@@ -20,13 +20,13 @@
         flex-direction: column;
         align-items: center;
         .year_carousel {
-          display: grid;
-          grid-template-columns: 40px 100px 40px;
+          display: flex;
+          // grid-template-columns: 40px 100px 40px;
           align-items: center;
           justify-items: center;
           gap: var(--space-l);
           .cal_year {
-            font-size: var(--text-xl);
+            font-size: var(--text-l);
           }
         }
         .month_carousel {
@@ -45,7 +45,8 @@
         min-width: 315px;
         min-height: 35px;
         border-radius: var(--round-full);
-        background: rgba(255, 255, 255, 0.9);
+        border: 2.5px solid var(--blue);
+        background: var(--light);
         -webkit-backdrop-filter: blur(2px);
         backdrop-filter: blur(2px);
         padding: 6px 18px;
@@ -163,6 +164,7 @@
 .calendar_detail_mode_info {
   .calendar_detail_mode_info_container {
     display: flex;
+    justify-content: center;
     gap: var(--space-xxs);
     .goal_point_fail,
     .goal_point_pass,
@@ -176,13 +178,13 @@
     .goal_point_fail,
     .goal_passed_fail,
     .daily_goal_info {
-      color: var(--gray1);
+      color: var(--black);
       font-weight: 500;
       font-size: var(--text-s);
     }
     .goal_point_pass,
     .goal_passed_pass {
-      color: var(--blue);
+      color: var(--black);
       font-weight: 600;
     }
   }
@@ -239,15 +241,15 @@
     }
     &.goal {
       background-color: #00a0fd10;
-      border-bottom: 1px solid var(--blue);
+      border-bottom: 2px solid var(--blue);
     }
     .date {
       position: absolute;
       top: 10px;
       left: 10px;
       z-index: 1;
-      color: var(--gray1);
-      font-size: var(--text-s);
+      color: rgba($color: #000000, $alpha: 0.8);
+      font-size: var(--text-xs);
     }
     .result {
       position: absolute;
@@ -258,7 +260,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 5px;
+      // gap: 5px;
       .event_dots {
         position: absolute;
         bottom: 3px;
@@ -288,17 +290,23 @@
         align-items: center;
         justify-content: center;
         gap: 2px;
-        font-size: var(--text-s);
+        font-size: var(--text-xs);
         color: var(--gray1);
         opacity: 0.3;
+        transition: all 0.1s;
       }
       .active {
+        cursor: pointer;
+        font-size: var(--text-m);
+        font-weight: 600;
         opacity: 1;
         &.earn_point {
-          color: #698eb2;
+          // color: #698eb2;
+          color: var(--blue);
         }
         &.passed {
-          color: #698eb2;
+          // color: #698eb2;
+          color: var(--blue);
         }
         &.goal {
           &.earn_point {
