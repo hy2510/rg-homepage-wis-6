@@ -184,7 +184,7 @@ export function IntroChooseItem({
             src={symbolImgSrc}
             width={300}
             height={200}
-            style={{ width: '100%', height: '100%' }}
+            style={{ width: '100%', height: 'auto' }}
           />
           <Button color={'red'} shadow onClick={onStartClick}>
             {t('t339')}

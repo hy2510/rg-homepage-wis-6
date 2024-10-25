@@ -451,6 +451,10 @@
   flex-direction: column;
   gap: var(--space-xs);
   z-index: 100;
+  @media (min-width: 600px) {
+    width: 100%;
+    min-width: 470px;
+  }
   @media (prefers-color-scheme: no-preference) {
     background-color: #0c0541;
     color: var(--white);

@@ -191,7 +191,7 @@ export const BookSearchBar = ({
           roundFull
           shadow
           color={'blue'}
-          width={'115px'}
+          width={'50px'}
           onClick={(e) => {
             if (isBookSearchActive && searchKeyword) {
               e?.stopPropagation()
@@ -207,7 +207,7 @@ export const BookSearchBar = ({
             src="/src/images/search-icons/search_white.svg"
             width={20}
             height={20}></Image>
-          <span>{t('t491')}</span>
+          {/* <span>{t('t491')}</span> */}
         </Button>
       </div>
       {isBookSearchActive && (

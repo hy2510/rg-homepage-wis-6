@@ -481,6 +481,8 @@ export function BookInfoModal({
     lblStartBtn = t('t795') // 이어서하기
   }
 
+  const swingWebViewPlugin = (window as any).swingWebViewPlugin
+
   const [viewVocaPrintOptions, setViewVocaPrintOptions] = useState(false)
 
   if (isBookInfoInitLoading || error) {
@@ -768,11 +770,20 @@ export function BookInfoModal({
                               const queryString = searchParams.toString()
 
                               const vocabularyUrl = `${url.protocol}//${url.host}${url.pathname}?${queryString}`
-                              window.open(
-                                vocabularyUrl,
-                                '_blank',
-                                'noopener, noreferrer',
-                              )
+
+                              // 외부 브라우저로 실행하기
+                              const currentPlatform =
+                                swingWebViewPlugin?.app?.methods?.getCurrentPlatform()
+
+                              if (currentPlatform === 'android' || currentPlatform === 'ios') {
+                                swingWebViewPlugin.app.methods.doExternalOpen(vocabularyUrl)
+                              } else {
+                                window.open(
+                                  vocabularyUrl,
+                                  '_blank',
+                                  'noopener, noreferrer',
+                                )
+                              }
                               setViewVocaPrintOptions(false)
                             } else {
                               alert(studyEndMessage)
@@ -789,11 +800,18 @@ export function BookInfoModal({
                         className={style.download_worksheet}
                         onClick={() => {
                           if (!isStudyEnd) {
-                            window.open(
-                              bookInfo.workSheetPath,
-                              '_blank',
-                              'noopener, noreferrer',
-                            )
+                            const currentPlatform =
+                              swingWebViewPlugin?.app?.methods?.getCurrentPlatform()
+
+                            if (currentPlatform === 'android' || currentPlatform === 'ios') {
+                              swingWebViewPlugin.app.methods.doExternalOpen(bookInfo.workSheetPath)
+                            } else {
+                              window.open(
+                                bookInfo.workSheetPath,
+                                '_blank',
+                                'noopener, noreferrer',
+                              )
+                            }
                           } else {
                             alert(studyEndMessage)
                           }
