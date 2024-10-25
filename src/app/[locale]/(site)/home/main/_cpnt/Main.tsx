@@ -136,14 +136,6 @@ function MainComponent({ platform }: { platform: string }) {
   }
   // <-- PWA 설치 메세지 띄우기
 
-  // const [environment, setEnvironment] = useState('');
-
-  // useEffect(() => {
-  //   setEnvironment(detectEnvironment(navigator.userAgent));
-  // }, []);
-
-  const useapp = useApplicationType()
-
   if (!mainData) {
     return <div></div>
   }
@@ -303,38 +295,4 @@ function MainComponent({ platform }: { platform: string }) {
       )}
     </main>
   )
-}
-
-function detectEnvironment(userAgent) {
-  // iOS WebView 감지
-  if (/iPhone|iPad|iPod/.test(userAgent) && !/Safari/.test(userAgent)) {
-    return "iOS WebView";
-  }
-
-  // Android WebView 감지
-  if (/Android/.test(userAgent) && /wv/.test(userAgent)) {
-    return "Android WebView";
-  }
-
-  // Chrome 브라우저 감지
-  if (/Chrome/.test(userAgent) && !/Edge|Edg|OPR/.test(userAgent)) {
-    return "Chrome";
-  }
-
-  // Safari 브라우저 감지
-  if (/Safari/.test(userAgent) && !/Chrome/.test(userAgent)) {
-    return "Safari";
-  }
-
-  // Firefox 브라우저 감지
-  if (/Firefox/.test(userAgent)) {
-    return "Firefox";
-  }
-
-  // Edge 브라우저 감지
-  if (/Edg/.test(userAgent)) {
-    return "Edge";
-  }
-
-  return "Unknown";
 }
