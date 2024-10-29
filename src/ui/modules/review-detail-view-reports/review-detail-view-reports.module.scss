@@ -1,6 +1,38 @@
 .detailed_reports_list {
   display: grid;
-  gap: var(--space-l);
+  gap: var(--space-m);
+  &.grid_type {
+    grid-template-columns: repeat(4, 1fr);
+    font-size: 0.9em;
+    .detailed_report_item {
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: end;
+      .book_cover {
+        max-width: 140px;
+        padding: 0;
+        padding-bottom: var(--space-s);
+      }
+      .report {
+        position: static;
+        width: 100%;
+        padding: var(--space-s);
+        .report_container {
+          position: static;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: var(--space-s);
+          .col2 {
+            gap: var(--space-xxs);
+          }
+        }
+      }
+    }
+  }
 }
 
 .detailed_report_item {
@@ -103,7 +135,7 @@
 .speak_reports_list {
   display: grid;
   gap: var(--space-l);
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
 }
 
 .speak_report_item {

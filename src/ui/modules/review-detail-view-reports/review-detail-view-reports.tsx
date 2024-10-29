@@ -6,10 +6,10 @@ import { useStyle } from '@/ui/context/StyleContext'
 const STYLE_ID = 'review_detail_view_reports'
 
 // 상세보기 리포트 리스트
-export const DetailedReportsList = ({ children }: { children?: ReactNode }) => {
+export const DetailedReportsList = ({ children, isGridView }: { children?: ReactNode, isGridView?: boolean }) => {
   const style = useStyle(STYLE_ID)
 
-  return <div className={style.detailed_reports_list}>{children}</div>
+  return <div className={`${style.detailed_reports_list} ${isGridView && style.grid_type}`}>{children}</div>
 }
 
 // 상세보기 리포트 아이템
@@ -116,7 +116,7 @@ export const DetailedReportItem = ({
             <div className={style.contents}>{studyDate}</div>
             <div className={style.label}>{t('t540')}</div>
             <div className={style.contents}>{totalScore}</div>
-            <div className={style.label}>{t('t140')}</div>
+            <div className={style.label}>{t('t544')}</div>
             <div className={style.contents}>
               {isPassed ? 'PASS /' : 'FAIL /'} {completedInfo}
               {isPassed && !isThirdStudy ? `(+${earnPoints}P)` : ''}

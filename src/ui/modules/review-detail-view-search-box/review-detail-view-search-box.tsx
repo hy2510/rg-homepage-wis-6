@@ -189,7 +189,7 @@ export const ReportSearchBox = ({
           width={20}
           height={20}
         />
-        <span className={style.button_text}>{t('t263')}</span>
+        {/* <span className={style.button_text}>{t('t263')}</span> */}
       </button>
     </div>
   )

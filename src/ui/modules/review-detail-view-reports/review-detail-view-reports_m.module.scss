@@ -1,26 +1,380 @@
+// .detailed_reports_list {
+//   display: flex;
+//   flex-direction: column;
+//   gap: var(--space-xxl);
+// }
+
+// .detailed_report_item {
+//   // position: relative;
+//   // z-index: 1;
+//   display: grid;
+//   grid-template-columns: 1fr 2.5fr;
+//   gap: var(--space-m);
+//   // padding: var(--space-s);
+//   .book_cover {
+//     display: flex;
+//     align-items: start;
+//     overflow: hidden;
+//     min-width: 90px;
+//     max-width: 120px;
+//     img {
+//       display: block;
+//       border-radius: var(--round-m);
+//       border: 1px solid rgba($color: #000000, $alpha: 0.05);
+//       background-image: url('/src/images/@global-header/company_logo_gray.svg');
+//       background-repeat: no-repeat;
+//       background-position: center;
+//       background-size: auto;
+//     }
+//   }
+//   .report {
+//     min-height: 150px;
+//     position: relative;
+//     @mixin afterStyle {
+//       content: '';
+//       position: absolute;
+//       z-index: -1;
+//       left: -100%;
+//       top: -20px;
+//       right: -100%;
+//       bottom: -10px;
+//       border-top: 2px solid var(--gray2);
+//       background-color: var(--gray3);
+//       // border-radius: 0 0 var(--round-l) var(--round-l);
+//       @media (prefers-color-scheme: no-preference) {
+//         background-color: #dae1ea20;
+//       }
+//     }
+//     &::after {
+//       @include afterStyle;
+//     }
+//     &.pass {
+//       &::after {
+//         @include afterStyle;
+//         background-color: var(--light);
+//         border-top: 2px solid var(--blue);
+//         @media (prefers-color-scheme: no-preference) {
+//           background-color: #15b5f120;
+//         }
+//       }
+//     }
+//     &.fail {
+//       &::after {
+//         @include afterStyle;
+//         background-color: #f9eeee;
+//         border-top: 2px solid var(--red);
+//         @media (prefers-color-scheme: no-preference) {
+//           background-color: #ff274f20;
+//         }
+//       }
+//     }
+//     .report_container {
+//       cursor: pointer;
+//       display: flex;
+//       flex-direction: column;
+//       gap: var(--space-s);
+//       font-size: 0.95em;
+//       .col1 {
+//         display: flex;
+//         flex-direction: column;
+//         gap: var(--space-xxs);
+//         width: calc(100% - 20px);
+//         .book_code {
+//           font-size: var(--text-m);
+//           color: var(--gray1);
+//         }
+//         .title {
+//           font-size: var(--text-d-1);
+//           font-weight: 500;
+//           white-space: nowrap;
+//           overflow: hidden;
+//           text-overflow: ellipsis;
+//         }
+//       }
+//       .col2 {
+//         display: grid;
+//         grid-template-columns: 1fr 2fr;
+//         gap: var(--space-xxs);
+//         .label {
+//           font-size: var(--text-m);
+//           color: var(--gray1);
+//         }
+//         .contents {
+//           font-size: var(--text-m);
+//           font-weight: 500;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// .speak_reports_list {
+//   display: grid;
+//   gap: var(--space-s);
+//   grid-template-columns: repeat(3, 1fr);
+//   @media (min-width: 600px) {
+//     grid-template-columns: repeat(5, 1fr);
+//   }
+//   @media (min-width: 1024px) {
+//     grid-template-columns: repeat(6, 1fr);
+//   }
+// }
+
+// .speak_report_item {
+//   display: flex;
+//   flex-direction: column;
+//   gap: var(--space-xxs);
+//   align-items: center;
+//   justify-content: flex-end;
+//   .book_cover {
+//     position: relative;
+//     margin-bottom: var(--space-m);
+//     .book_cover_img {
+//       cursor: pointer;
+//       filter: contrast(103%);
+//       border-radius: var(--round-m);
+//       border: 1.2px solid rgba($color: #000000, $alpha: 0.15);
+//       @media (prefers-color-scheme: no-preference) {
+//         border: 1.2px solid rgba($color: #ffffff, $alpha: 0.2);
+//       }
+//       // box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+//       //   rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+//       //   rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+//     }
+//     @mixin mark {
+//       width: 40px;
+//       height: 40px;
+//       border-radius: 100px;
+//       border: 2px solid var(--white);
+//       position: absolute;
+//       bottom: -15px;
+//       left: calc(50% - 20px);
+//       background-repeat: no-repeat;
+//       background-position: center;
+//       background-size: 25px;
+//     }
+//     .pass_mark {
+//       @include mark;
+//       background-color: var(--blue);
+//       background-image: url('/src/images/check-icons/check_white.svg');
+//     }
+//     .fail_mark {
+//       @include mark;
+//       background-color: var(--red);
+//       background-image: url('/src/images/delete-icons/x_white.svg');
+//     }
+//   }
+//   .result {
+//     text-align: center;
+//     font-weight: 600;
+//     .label {
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;
+//       gap: var(--space-xxs);
+//       .pass {
+//         color: var(--blue);
+//       }
+//       .fail {
+//         color: var(--red);
+//       }
+//     }
+//   }
+//   .date {
+//     text-align: center;
+//     font-size: var(--text-s);
+//     &.pass {
+//       color: var(--blue);
+//     }
+//     &.fail {
+//       color: var(--red);
+//     }
+//   }
+// }
+
+// .writing_reports_list {
+//   display: flex;
+//   flex-direction: column;
+//   gap: var(--space-m);
+// }
+
+// .writing_report_item {
+//   position: relative;
+//   z-index: 1;
+//   display: grid;
+//   grid-template-columns: 1fr 2.5fr;
+//   gap: var(--space-m);
+//   padding: var(--space-s);
+//   border-top: 2px solid var(--gray2);
+//   background-color: var(--gray3);
+//   @media (prefers-color-scheme: no-preference) {
+//     background-color: #00000020;
+//   }
+//   .book_cover {
+//     display: flex;
+//     align-items: start;
+//     overflow: hidden;
+//     min-width: 90px;
+//     img {
+//       display: block;
+//       border-radius: 0 0 var(--round-m) var(--round-m);
+//     }
+//   }
+//   .report {
+//     min-height: 150px;
+//     @mixin afterStyle {
+//       content: '';
+//       position: absolute;
+//       z-index: -1;
+//       left: 0;
+//       top: 0;
+//       right: 0;
+//       bottom: 0;
+//       border-radius: 0 0 var(--round-l) var(--round-l);
+//     }
+//     &.pass {
+//       &::after {
+//         @include afterStyle;
+//         background-color: var(--light);
+//         border-top: 2px solid var(--blue);
+//         @media (prefers-color-scheme: no-preference) {
+//           background-color: #15b5f120;
+//         }
+//       }
+//     }
+//     &.fail {
+//       &::after {
+//         @include afterStyle;
+//         background-color: #f9eeee;
+//         border-top: 2px solid var(--red);
+//         @media (prefers-color-scheme: no-preference) {
+//           background-color: #ff274f20;
+//         }
+//       }
+//     }
+//     .report_container {
+//       cursor: pointer;
+//       display: flex;
+//       flex-direction: column;
+//       gap: var(--space-s);
+//       font-size: 0.95em;
+//       .col1 {
+//         display: flex;
+//         flex-direction: column;
+//         gap: var(--space-xxs);
+//         width: calc(100% - 20px);
+//         .book_code {
+//           font-size: var(--text-m);
+//           color: var(--gray1);
+//         }
+//         .title {
+//           font-size: var(--text-d-1);
+//           font-weight: 500;
+//           white-space: nowrap;
+//           overflow: hidden;
+//           text-overflow: ellipsis;
+//         }
+//       }
+//       .col2 {
+//         display: grid;
+//         grid-template-columns: 1fr 2fr;
+//         gap: var(--space-xxs);
+//         .label {
+//           font-size: var(--text-m);
+//           color: var(--gray1);
+//         }
+//         .contents {
+//           font-size: var(--text-m);
+//           font-weight: 500;
+//         }
+//       }
+//     }
+//   }
+// }
+
 .detailed_reports_list {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-xxl);
+  display: grid;
+  gap: var(--space-m);
+  &.grid_type {
+    grid-template-columns: repeat(1, 1fr);
+    font-size: 0.9em;
+    @media (min-width: 600px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .detailed_report_item {
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: end;
+      @media (max-width: 600px) {
+        flex-direction: row;
+        gap: var(--space-m);
+      }
+      .book_cover {
+        max-width: 140px;
+        padding: 0;
+        padding-bottom: var(--space-s);
+        @media (max-width: 600px) {
+          position: absolute;
+          right: 10px;
+          bottom: 10px;
+          max-width: 100px;
+          padding-bottom: 0;
+          img {
+            border-radius: var(--round-m);
+          }
+        }
+      }
+      .report {
+        position: static;
+        width: 100%;
+        padding: var(--space-s);
+        @media (max-width: 600px) {
+          position: relative;
+        }
+        .report_container {
+          position: static;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: var(--space-s);
+          .col2 {
+            gap: var(--space-xxs);
+            @media (max-width: 600px) {
+              grid-template-columns: 1fr;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 .detailed_report_item {
-  // position: relative;
-  // z-index: 1;
-  display: grid;
-  grid-template-columns: 1fr 2.5fr;
-  gap: var(--space-m);
-  // padding: var(--space-s);
+  position: relative;
+  transform: none;
   .book_cover {
-    display: flex;
-    align-items: start;
-    overflow: hidden;
-    min-width: 90px;
-    max-width: 120px;
+    height: fit-content;
+    width: fit-content;
+    display: inline-block;
+    padding: 0 20px 20px 20px;
+    position: relative;
+    z-index: 1;
     img {
-      display: block;
-      border-radius: var(--round-m);
-      border: 1px solid rgba($color: #000000, $alpha: 0.05);
+      border-radius: var(--round-l);
+      overflow: hidden;
+      cursor: pointer;
+      filter: contrast(103%);
+      border-radius: var(--round-l);
+      box-shadow:
+        rgba(0, 0, 0, 0.4) 0px 2px 4px,
+        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+        rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
       background-image: url('/src/images/@global-header/company_logo_gray.svg');
       background-repeat: no-repeat;
       background-position: center;
@@ -28,62 +382,51 @@
     }
   }
   .report {
-    min-height: 150px;
-    position: relative;
-    @mixin afterStyle {
-      content: '';
-      position: absolute;
-      z-index: -1;
-      left: -100%;
-      top: -20px;
-      right: -100%;
-      bottom: -10px;
-      border-top: 2px solid var(--gray2);
-      background-color: var(--gray3);
-      // border-radius: 0 0 var(--round-l) var(--round-l);
-      @media (prefers-color-scheme: no-preference) {
-        background-color: #dae1ea20;
-      }
-    }
-    &::after {
-      @include afterStyle;
+    min-height: 180px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 0 0 var(--round-m) var(--round-l);
+    z-index: 0;
+    border-top: 2px solid var(--gray2);
+    background-color: var(--gray3);
+    @media (prefers-color-scheme: no-preference) {
+      background-color: #00000020;
     }
     &.pass {
-      &::after {
-        @include afterStyle;
-        background-color: var(--light);
-        border-top: 2px solid var(--blue);
-        @media (prefers-color-scheme: no-preference) {
-          background-color: #15b5f120;
-        }
+      background-color: var(--light);
+      border-top: 2px solid var(--blue);
+      @media (prefers-color-scheme: no-preference) {
+        background-color: #15b5f120;
       }
     }
     &.fail {
-      &::after {
-        @include afterStyle;
-        background-color: #f9eeee;
-        border-top: 2px solid var(--red);
-        @media (prefers-color-scheme: no-preference) {
-          background-color: #ff274f20;
-        }
+      background-color: #f9eeee;
+      border-top: 2px solid var(--red);
+      @media (prefers-color-scheme: no-preference) {
+        background-color: #ff274f20;
       }
     }
     .report_container {
       cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-s);
-      font-size: 0.95em;
+      position: absolute;
+      bottom: 25%;
+      left: calc(140px + 50px);
+      right: 20px;
+      display: grid;
+      grid-template-columns: 2fr 1.5fr;
+      gap: var(--space-m);
       .col1 {
         display: flex;
         flex-direction: column;
         gap: var(--space-xxs);
-        width: calc(100% - 20px);
         .book_code {
           font-size: var(--text-m);
           color: var(--gray1);
         }
         .title {
+          max-width: 420px;
           font-size: var(--text-d-1);
           font-weight: 500;
           white-space: nowrap;
@@ -94,7 +437,7 @@
       .col2 {
         display: grid;
         grid-template-columns: 1fr 2fr;
-        gap: var(--space-xxs);
+        gap: var(--space-xs);
         .label {
           font-size: var(--text-m);
           color: var(--gray1);
@@ -102,6 +445,7 @@
         .contents {
           font-size: var(--text-m);
           font-weight: 500;
+          // color: var(--black);
         }
       }
     }
@@ -110,8 +454,8 @@
 
 .speak_reports_list {
   display: grid;
-  gap: var(--space-s);
-  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-l);
+  grid-template-columns: repeat(6, 1fr);
 }
 
 .speak_report_item {
@@ -122,30 +466,27 @@
   justify-content: flex-end;
   .book_cover {
     position: relative;
-    margin-bottom: var(--space-m);
+    margin-bottom: var(--space-l);
     .book_cover_img {
       cursor: pointer;
       filter: contrast(103%);
-      border-radius: var(--round-m);
-      border: 1.2px solid rgba($color: #000000, $alpha: 0.15);
-      @media (prefers-color-scheme: no-preference) {
-        border: 1.2px solid rgba($color: #ffffff, $alpha: 0.2);
-      }
-      // box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-      //   rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
-      //   rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+      border-radius: var(--round-l);
+      box-shadow:
+        rgba(0, 0, 0, 0.4) 0px 2px 4px,
+        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+        rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     }
     @mixin mark {
-      width: 40px;
-      height: 40px;
+      width: 50px;
+      height: 50px;
       border-radius: 100px;
       border: 2px solid var(--white);
       position: absolute;
-      bottom: -15px;
-      left: calc(50% - 20px);
+      bottom: -25px;
+      left: calc(50% - 25px);
       background-repeat: no-repeat;
       background-position: center;
-      background-size: 25px;
+      background-size: 30px;
     }
     .pass_mark {
       @include mark;
@@ -187,81 +528,77 @@
 }
 
 .writing_reports_list {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-m);
+  display: grid;
+  gap: var(--space-l);
 }
 
 .writing_report_item {
   position: relative;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: 1fr 2.5fr;
-  gap: var(--space-m);
-  padding: var(--space-s);
-  border-top: 2px solid var(--gray2);
-  background-color: var(--gray3);
-  @media (prefers-color-scheme: no-preference) {
-    background-color: #00000020;
-  }
   .book_cover {
-    display: flex;
-    align-items: start;
-    overflow: hidden;
-    min-width: 90px;
+    height: fit-content;
+    width: fit-content;
+    display: inline-block;
+    padding: 0 20px 20px 20px;
+    position: relative;
+    z-index: 1;
     img {
-      display: block;
-      border-radius: 0 0 var(--round-m) var(--round-m);
+      border-radius: var(--round-l);
+      overflow: hidden;
+      cursor: pointer;
+      filter: contrast(103%);
+      border-radius: var(--round-l);
+      box-shadow:
+        rgba(0, 0, 0, 0.4) 0px 2px 4px,
+        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+        rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     }
   }
   .report {
-    min-height: 150px;
-    @mixin afterStyle {
-      content: '';
-      position: absolute;
-      z-index: -1;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      border-radius: 0 0 var(--round-l) var(--round-l);
+    min-height: 160px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 0 0 var(--round-m) var(--round-l);
+    z-index: 0;
+    border-top: 2px solid var(--gray2);
+    background-color: var(--gray3);
+    @media (prefers-color-scheme: no-preference) {
+      background-color: #00000020;
     }
     &.pass {
-      &::after {
-        @include afterStyle;
-        background-color: var(--light);
-        border-top: 2px solid var(--blue);
-        @media (prefers-color-scheme: no-preference) {
-          background-color: #15b5f120;
-        }
+      background-color: var(--light);
+      border-top: 2px solid var(--blue);
+      @media (prefers-color-scheme: no-preference) {
+        background-color: #15b5f120;
       }
     }
     &.fail {
-      &::after {
-        @include afterStyle;
-        background-color: #f9eeee;
-        border-top: 2px solid var(--red);
-        @media (prefers-color-scheme: no-preference) {
-          background-color: #ff274f20;
-        }
+      background-color: #f9eeee;
+      border-top: 2px solid var(--red);
+      @media (prefers-color-scheme: no-preference) {
+        background-color: #ff274f20;
       }
     }
     .report_container {
       cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-s);
-      font-size: 0.95em;
+      position: absolute;
+      bottom: 12%;
+      left: calc(140px + 50px);
+      right: 20px;
+      display: grid;
+      grid-template-columns: 2fr 1.5fr;
+      gap: var(--space-m);
       .col1 {
         display: flex;
         flex-direction: column;
         gap: var(--space-xxs);
-        width: calc(100% - 20px);
         .book_code {
           font-size: var(--text-m);
           color: var(--gray1);
         }
         .title {
+          max-width: 420px;
           font-size: var(--text-d-1);
           font-weight: 500;
           white-space: nowrap;
@@ -272,7 +609,7 @@
       .col2 {
         display: grid;
         grid-template-columns: 1fr 2fr;
-        gap: var(--space-xxs);
+        gap: var(--space-xs);
         .label {
           font-size: var(--text-m);
           color: var(--gray1);

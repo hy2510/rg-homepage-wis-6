@@ -169,8 +169,10 @@ import page_level_master_board from '@/app/[locale]/(site)/ranking/level-master-
 import page_level_master_board_m from '@/app/[locale]/(site)/ranking/level-master-board/page_m.module.scss'
 import page_points_rank from '@/app/[locale]/(site)/ranking/points-rank/page.module.scss'
 import page_points_rank_m from '@/app/[locale]/(site)/ranking/points-rank/page_m.module.scss'
-import page_quick_view from '@/app/[locale]/(site)/review/(quick-view)/page.module.scss'
-import page_quick_view_m from '@/app/[locale]/(site)/review/(quick-view)/page_m.module.scss'
+import page_review from '@/app/[locale]/(site)/review/(default)/page.module.scss'
+import page_review_m from '@/app/[locale]/(site)/review/(default)/page_m.module.scss'
+import page_quick_view from '@/app/[locale]/(site)/review/quick-view/page.module.scss'
+import page_quick_view_m from '@/app/[locale]/(site)/review/quick-view/page_m.module.scss'
 import page_detailed_view from '@/app/[locale]/(site)/review/detailed-view/page.module.scss'
 import page_detailed_view_m from '@/app/[locale]/(site)/review/detailed-view/page_m.module.scss'
 import page_trial from '@/app/[locale]/(site)/trial/page.module.scss'
@@ -274,6 +276,8 @@ export default function findStyle(id: string): {
       return { pc: page_hall_of_fame_rank, mobile: page_hall_of_fame_rank_m }
     case 'page_points_rank':
       return { pc: page_points_rank, mobile: page_points_rank_m }
+    case 'page_review':
+      return { pc: page_review, mobile: page_review_m }
     case 'page_quick_view':
       return { pc: page_quick_view, mobile: page_quick_view_m }
     case 'page_detailed_view':

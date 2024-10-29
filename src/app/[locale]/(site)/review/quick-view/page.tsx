@@ -34,7 +34,7 @@ export default function Page() {
   return <HistoryLayout />
 }
 
-function HistoryLayout() {
+export function HistoryLayout() {
   const style = useStyle(STYLE_ID)
 
   // @Language 'common'

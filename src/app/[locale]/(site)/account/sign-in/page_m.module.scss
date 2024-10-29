@@ -231,11 +231,21 @@
   font-size: var(--text-l);
   font-weight: 500;
   opacity: 0.1;
-  display: none;
+  display: flex;
   flex-direction: column;
+  @media (orientation: portrait) {
+    @media (max-width: 600px) {
+      display: none;
+    }
+  }
+  @media (orientation: landscape) {
+    @media (max-height: 600px) {
+      display: none;
+    }
+  }
   .lock_btn_position {
     position: fixed;
-    right: 20px;
+    left: 20px;
     bottom: 20px;
     cursor: default;
   }
