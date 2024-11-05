@@ -348,19 +348,27 @@ const CalendarUI = ({ loading: propsLoading }: { loading: boolean }) => {
                   onClick={() => monthChangeRight(info)}></div>
               </div>
             </div>
-            <div className={style.monthly_study_status}>
-              {isSimpleMode ? (
+            <div className={style.monthly_study_status_container}>
+              <div className={style.monthly_study_status}>
+                {isSimpleMode ? (
+                  <CalendarSimpleModeInfo
+                    attendDays={attendDays}
+                    studyDays={studyDays}
+                  />
+                ) : (
+                  <CalendarDetailModeInfo
+                    settingType={userStudyLearningType}
+                    settingValue={userStudyLearningValue}
+                    studyDays={studyDays}
+                  />
+                )}
+              </div>
+              <div className={style.attend_status}>
                 <CalendarSimpleModeInfo
                   attendDays={attendDays}
                   studyDays={studyDays}
                 />
-              ) : (
-                <CalendarDetailModeInfo
-                  settingType={userStudyLearningType}
-                  settingValue={userStudyLearningValue}
-                  studyDays={studyDays}
-                />
-              )}
+              </div>
             </div>
           </div>
         </div>
@@ -423,15 +431,15 @@ const CalendarSimpleModeInfo = ({
   return (
     <div className={style.calendar_simple_mode_info}>
       <div className={style.attend_days}>
-        <Image
+        {/* <Image
           alt={''}
           src="/src/images/@calendar-modal/circle_green.svg"
           width="18"
           height="18"
-        />
+        /> */}
         <span>{t('t018', { num: attendDays })}</span>
       </div>
-      <div className={style.achieve_goals}>
+      {/* <div className={style.achieve_goals}>
         <Image
           alt={''}
           src="/src/images/@calendar-modal/circle_blue.svg"
@@ -439,7 +447,7 @@ const CalendarSimpleModeInfo = ({
           height="18"
         />
         <span>{t('t019', { num: studyDays })}</span>
-      </div>
+      </div> */}
     </div>
   )
 }
@@ -735,7 +743,7 @@ const CalendarDetailDay = ({
     )
   }
   return (
-    <div className={`${style.cal_item}${isSuccess ? ` ${style.goal}` : ''}`}>
+    <div className={`${style.cal_item} ${isSuccess ? style.goal : ''} ${isAttend ? style.attend : ''}`}>
       <div className={style.date}>{day}</div>
       <div className={style.result}>
         <div

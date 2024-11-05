@@ -291,7 +291,7 @@
   flex-wrap: nowrap;
   white-space: nowrap;
   align-items: center;
-  gap: var(--space-s);
+  gap: var(--space-xs);
   padding-bottom: 5px;
   overflow-x: scroll;
   &::-webkit-scrollbar {
@@ -306,7 +306,7 @@
   font-weight: 500;
   background-color: var(--gray3);
   color: var(--gray1);
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  // box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   cursor: pointer;
   @media (prefers-color-scheme: no-preference) {
     background-color: rgba($color: #ffffff, $alpha: 0.15);
@@ -883,7 +883,7 @@
   // grid-template-columns: 120px 1fr;
   // align-items: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: start;
   justify-content: center;
   gap: var(--space-xxs);

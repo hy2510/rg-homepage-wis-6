@@ -8,9 +8,12 @@
   .row_1 {
     position: relative;
     z-index: 3;
+    padding: var(--space-xxs);
+    padding-top: var(--space-s);
+    font-size: 0.85em;
     @mixin txtColor {
       color: var(--white);
-      font-weight: 600;
+      font-weight: 500;
     }
     .group_1 {
       .txt_1 {

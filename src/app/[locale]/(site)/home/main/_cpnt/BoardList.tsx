@@ -35,7 +35,7 @@ export default function BoardList({
           )
         })}
       </NoticeBoardContainer>
-      <Margin height={30} />
+      <Margin height={20} />
       <PaginationBar page={page} maxPage={maxPage} onPageClick={onPageClick} />
     </div>
   )

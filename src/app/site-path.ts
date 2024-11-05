@@ -22,7 +22,9 @@ const HOME = {
   RG_PAYMENT: '/home/rg-payment/purchase',
   RG_PAYMENT_HISTORY: '/home/rg-payment/history',
   USER_GUIDE: '/home/user-guide',
+  USER_GUIDE_VN: '/home/user-guide-vn',
   ABOUT_TO_SCHOOL: '/home/about-to-school',
+  ABOUT_VN: '/home/about-vn',
 }
 const ACCOUNT = {
   MAIN: '/account/account-list',

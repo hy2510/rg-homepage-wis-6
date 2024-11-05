@@ -486,9 +486,9 @@ function AwardListItem({
   return (
     <div className={style.award_list_item} onClick={onClick}>
       <div className={style.col_a}>
-        <span className={style.txt_l}>{tag}</span>
+        {/* <span className={style.txt_l}>{tag}</span> */}
         <span className={style.txt_p}>
-          {text} {collectNum}
+          {text} ({collectNum})
         </span>
       </div>
       <Image alt="" src={iconPath} width={24} height={24} />

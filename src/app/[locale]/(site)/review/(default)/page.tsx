@@ -343,7 +343,7 @@ function ReadList({
               gap: '15px',
               position: 'relative',
             }}>
-            <div style={{ display: 'flex', gap: '15px' }}>
+            <div style={{ display: 'flex', gap: '10px' }}>
               <PillItem
                 active={tab === 'all'}
                 onClick={() => {

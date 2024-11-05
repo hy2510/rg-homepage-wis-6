@@ -55,11 +55,11 @@ function PrivateFooter() {
   const customer = useCustomerInfo()
   const address = `${customer.address} ${customer.detailAddress}`
   const subInfos: { text: string; href?: string; label?: string }[] = [
-    { text: '대표이사 김용환' },
-    { text: '사업자 등록 번호 119-86-01044' },
-    { text: '통신판매번호: 2013-경기성남-0836호 성남교육지원청 등록 제4868호' },
+    { text: t('t551') },
+    { text: t('t552') },
+    { text: t('t553') },
     {
-      text: '대표번호 : ',
+      text: `${t('t554')} : `,
       href: `tel:${RG_CUSTOMER_CENTER_TEL}`,
       label: RG_CUSTOMER_CENTER_TEL,
     },
@@ -96,8 +96,7 @@ function PrivateFooter() {
         </Link>
       </div>
       <div className={style.row_c}>
-        <div>{address}</div>
-        <br />
+        <div style={{marginBottom: '10px'}}>{address}</div>
         <div>
           {subInfos.map((item, i) => {
             const isLastItem = subInfos.length - 1 === i

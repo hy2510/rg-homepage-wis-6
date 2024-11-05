@@ -54,15 +54,34 @@
           }
         }
       }
-      .monthly_study_status {
-        min-width: 300px;
-        min-height: 34px;
-        border-radius: var(--round-full);
-        border: 2.5px solid var(--blue);
-        background: var(--light);
-        -webkit-backdrop-filter: blur(2px);
-        backdrop-filter: blur(2px);
-        padding: 6px 18px;
+      .monthly_study_status_container {
+        min-width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-xxs);
+        font-size: 0.9em;
+        .monthly_study_status {
+          width: 100%;
+          min-width: 300px;
+          border-radius: var(--round-full);
+          border: 2.5px solid var(--blue);
+          background: var(--light);
+          -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+          padding: 6px 18px;
+        }
+        .attend_status {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          min-width: 300px;
+          border-radius: var(--round-full);
+          border: 2.5px dotted var(--yellow);
+          background: var(--white);
+          padding: 6px 18px;
+          transition: all 0.2s;
+        }
       }
     }
   }
@@ -121,7 +140,7 @@
     gap: var(--space-xxs);
   }
   .attend_days {
-    color: var(--green);
+    // color: var(--green);
     font-weight: 600;
   }
   .achieve_goals {
@@ -252,9 +271,12 @@
     @media (prefers-color-scheme: no-preference) {
       border-bottom: 1px solid rgba($color: #fff, $alpha: 0.15);
     }
+    &.attend {
+      border-bottom: 2px dotted var(--yellow);
+    }
     &.goal {
       background-color: #00a0fd10;
-      border-bottom: 2px solid var(--blue);
+      border-bottom: 2px solid var(--blue) !important;
     }
     .date {
       position: absolute;

@@ -24,6 +24,8 @@ import home_main_log_in from '@/ui/modules/home-main-components/home-main-log-in
 import home_main_log_in_m from '@/ui/modules/home-main-components/home-main-log-in_m.module.scss'
 import home_main_main_banner from '@/ui/modules/home-main-components/home-main-main-banner.module.scss'
 import home_main_main_banner_m from '@/ui/modules/home-main-components/home-main-main-banner_m.module.scss'
+import home_main_quick_menu from '@/ui/modules/home-main-components/home-main-quick-menu.module.scss'
+import home_main_quick_menu_m from '@/ui/modules/home-main-components/home-main-quick-menu_m.module.scss'
 import home_main_rg_news from '@/ui/modules/home-main-components/home-main-rg-news.module.scss'
 import home_main_rg_news_m from '@/ui/modules/home-main-components/home-main-rg-news_m.module.scss'
 import home_main_rg_post from '@/ui/modules/home-main-components/home-main-rg-post.module.scss'
@@ -101,6 +103,8 @@ import page_kids_prek from '@/app/[locale]/(site)/basic/pre-k/page.module.scss'
 import page_kids_prek_m from '@/app/[locale]/(site)/basic/pre-k/page_m.module.scss'
 import page_about_to_school from '@/app/[locale]/(site)/home/about-to-school/page.module.scss'
 import page_about_to_school_m from '@/app/[locale]/(site)/home/about-to-school/page_m.module.scss'
+import page_about_vn from '@/app/[locale]/(site)/home/about-vn/page.module.scss'
+import page_about_vn_m from '@/app/[locale]/(site)/home/about-vn/page_m.module.scss'
 import page_interview from '@/app/[locale]/(site)/home/customer-review/interview/page.module.scss'
 import page_interview_m from '@/app/[locale]/(site)/home/customer-review/interview/page_m.module.scss'
 import page_customer_review from '@/app/[locale]/(site)/home/customer-review/page.module.scss'
@@ -317,6 +321,8 @@ export default function findStyle(id: string): {
       return { pc: home_main_log_in, mobile: home_main_log_in_m }
     case 'home_main_main_banner':
       return { pc: home_main_main_banner, mobile: home_main_main_banner_m }
+    case 'home_main_quick_menu':
+      return { pc: home_main_quick_menu, mobile: home_main_quick_menu_m }
     case 'home_main_rg_news':
       return { pc: home_main_rg_news, mobile: home_main_rg_news_m }
     case 'home_main_rg_post':
@@ -394,6 +400,8 @@ export default function findStyle(id: string): {
       return { pc: page_ticket, mobile: page_ticket_m }
     case 'page_about_to_school':
       return { pc: page_about_to_school, mobile: page_about_to_school_m }
+    case 'page_about_vn':
+      return { pc: page_about_vn, mobile: page_about_vn_m }
     case 'page_group_search':
       return { pc: page_group_search, mobile: page_group_search_m }
     default:

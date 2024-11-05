@@ -19,9 +19,13 @@ export default function Layout({ children }: { children?: ReactNode }) {
   const style = useStyle(STYLE_ID)
 
   const { country } = useSiteBlueprint()
+  const isTouchDevice = () => {
+    return window.matchMedia('(pointer: coarse)').matches;
+  };
 
   return (
     <main className={`${style.rg_membership} container`}>
+      {isTouchDevice() && <div></div>}
       <NavBar>
         {country.korea && <MenuKorea />}
         {country.vietnam && <MenuVietnam />}

@@ -71,6 +71,13 @@ export default function Layout({ children }: { children?: ReactNode }) {
                     color: 'red',
                   }}>
                   <div>{paymentMessage}</div>
+                  {studyState !== 'PAUSED' && (
+                    <div>
+                      <Link href={paymentUrl}>
+                        <b>{t('t193')}</b>
+                      </Link>
+                    </div>
+                  )}
                   {studyState === 'NEED_PAYMENT' && isPaymentable && (
                     <div>
                       <Link href={paymentUrl}>
@@ -93,7 +100,7 @@ export default function Layout({ children }: { children?: ReactNode }) {
             </>
           )}
         </div>
-        {connectMainRgNews ? <></> : <HomeNavBar />}
+        {/* {connectMainRgNews ? <></> : <HomeNavBar />} */}
         {children}
       </div>
       {country.korea && (

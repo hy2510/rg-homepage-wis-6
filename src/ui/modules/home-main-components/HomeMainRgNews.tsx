@@ -138,6 +138,75 @@ export const RgNewsCardBasic = ({
   )
 }
 
+export const RgNewsTableItem = ({
+  tag,
+  tagColor,
+  title,
+  titleColor,
+  summary,
+  summaryColor,
+  date,
+  dateColor,
+  bgColor,
+  bgImage,
+  btnMore,
+  href,
+  target,
+}: {
+  tag?: string
+  tagColor?: string
+  title?: string
+  titleColor?: string
+  summary?: string
+  summaryColor?: string
+  date?: string
+  dateColor?: string
+  bgColor?: string
+  bgImage?: string
+  btnMore?: string
+  href?: string
+  target?: string
+}) => {
+  const style = useStyle(STYLE_ID)
+  // @Language 'common'
+  const { t } = useTranslation()
+
+  return (
+    <Link
+      href={href ? href : ''}
+      className={style.rg_news_table_item}
+      style={{
+        backgroundImage: bgImage ? `url(${bgImage})` : '',
+        backgroundColor: bgColor ? bgColor : '',
+      }}
+      target={target ? target : '_self'}>
+      <div className={style.title}>
+        {title}
+      </div>
+      <div className={style.date}>
+        {date}
+      </div>
+    </Link>
+  )
+}
+
+export const RgNewsTable = ({ children }: { children?: ReactNode }) => {
+  const style = useStyle(STYLE_ID)
+  const { t } = useTranslation()
+
+  return <>
+    <div className={style.rg_news_table}>
+      <div className={style.header}>
+        <div className={style.label}>{t('t325')}</div>
+        <Link href='/home/main/rg-news/notice'>
+          <div className={style.more_button}>{t('t510')}</div>
+        </Link>
+      </div>
+      {children}
+    </div>
+  </>
+}
+
 export const RgNewsCardInfographic = ({
   title,
   summary,

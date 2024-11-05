@@ -38,7 +38,7 @@ export default function BoardDetail({
         }}>
         {backLabel}
       </BackLink>
-      <Margin height={30} />
+      <Margin height={20} />
       <div className={style.rg_news_post}>
         <div className={style.row_1}>
           <div className={style.txt_1}>{title}</div>

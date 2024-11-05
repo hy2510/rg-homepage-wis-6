@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Button } from '@/ui/common/common-components'
 import { useStyle } from '@/ui/context/StyleContext'
 import FlyChild from '../FlyChild'
+import Image from 'next/image'
 
 const STYLE_ID = 'home_main_log_in'
 
@@ -24,7 +25,8 @@ export default function LogIn({
           <div className={style.txt_1}>{t('t455')}</div>
           <div className={style.txt_1}>{t('t456')}</div>
         </div>
-        <div className={style.txt_2}>{t('t206')}</div>
+        {/* <div className={style.txt_2}>{t('t206')}</div> */}
+        <Image src='/src/images/@home/logo_full.svg' width={182} height={24} alt='' style={{width: '150px', height: 'auto', marginTop: '10px'}} />
       </div>
       <div className={style.row_2}>
         <div className={style.group_1}>

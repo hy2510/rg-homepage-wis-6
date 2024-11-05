@@ -288,7 +288,7 @@
 .pill_container {
   display: flex;
   align-items: center;
-  gap: var(--space-s);
+  gap: var(--space-xs);
 }
 
 // 필 네브 아이템
@@ -298,7 +298,7 @@
   font-weight: 500;
   background-color: var(--gray3);
   color: var(--gray1);
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  // box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   cursor: pointer;
   @media (prefers-color-scheme: no-preference) {
     background-color: rgba($color: #ffffff, $alpha: 0.15);

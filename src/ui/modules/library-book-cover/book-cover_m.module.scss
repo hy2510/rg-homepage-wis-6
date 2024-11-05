@@ -28,6 +28,9 @@
     }
     .book_image {
       position: relative;
+      border-radius: var(--round-l);
+      border: 1px solid var(--gray3);
+      overflow: hidden;
       .grade_badge {
         position: absolute;
         top: 3px;
@@ -58,7 +61,7 @@
         height: 34px;
         position: absolute;
         z-index: 1;
-        bottom: 5px;
+        bottom: 0;
         right: 0;
         display: flex;
         align-items: center;
@@ -70,7 +73,9 @@
         cursor: pointer;
         filter: contrast(103%);
         border-radius: var(--round-m);
-        border: 1.2px solid rgba($color: #000000, $alpha: 0.15);
+        display: block;
+        // transform: scale(1.05);
+        // border: 1.2px solid rgba($color: #000000, $alpha: 0.15);
         @media (prefers-color-scheme: no-preference) {
           border: 1.2px solid rgba($color: #ffffff, $alpha: 0.3);
         }

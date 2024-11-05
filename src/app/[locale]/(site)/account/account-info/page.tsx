@@ -267,7 +267,7 @@ export default function Page() {
         {/* 회원 & 결제 정보 */}
         {isShowStudyEndDay && (
           <>
-            <div className={style.sub_title}>{t('t190')}</div>
+            {/* <div className={style.sub_title}>{t('t190')}</div> */}
             <div className={`${style.description} ${style.include_link}`}>
               <div className={style.lable_text}>
                 {t('t191', { num: student.studyEndDay })}
@@ -285,7 +285,7 @@ export default function Page() {
         )}
         {!isShowStudyEndDay && isPaymentable && (
           <>
-            <div className={style.sub_title}>{t('t190')}</div>
+            {/* <div className={style.sub_title}>{t('t190')}</div> */}
             <div className={`${style.description} ${style.include_link}`}>
               <Link href={paymentUrl} className={style.link_text}>
                 {t('t193')}

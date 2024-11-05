@@ -6,14 +6,15 @@
     .advance_notice {
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: baseline;
       flex-direction: column;
-      border-radius: var(--round-full);
-      border: 2px solid var(--blue);
+      // border-radius: var(--round-full);
+      // border: 2px solid var(--blue);
       padding: var(--space-s);
+      padding-left: var(--space-xs);
       .txt_p {
         color: var(--blue);
-        font-size: var(--text-d-1);
+        font-size: var(--text-l);
         font-weight: 600;
       }
     }

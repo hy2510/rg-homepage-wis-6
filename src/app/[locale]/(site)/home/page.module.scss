@@ -4,10 +4,10 @@
   animation: linear 200s infinite cloud;
   @keyframes cloud {
     0% {
-      background-position: top -30px right 0;
+      background-position: top -100px right 0;
     }
     100% {
-      background-position: top -30px right -5187px;
+      background-position: top -100px right -5187px;
     }
   }
   @media (prefers-color-scheme: no-preference) {

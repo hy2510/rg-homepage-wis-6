@@ -21,12 +21,17 @@ export default function Layout({ children }: { children?: ReactNode }) {
 
   const { isChallengeMenu, isNewsLetter, country } = useSiteBlueprint()
 
+  const isTouchDevice = () => {
+    return window.matchMedia('(pointer: coarse)').matches;
+  };
+
   return (
     <main className="container compact">
+      {isTouchDevice() && <Margin height={20} />}
       <BackLink href={SITE_PATH.HOME.MAIN} largeFont colorWhite>
         {t('t326')}
       </BackLink>
-      <Margin height={30} />
+      <Margin height={20} />
       <div className={style.rg_news}>
         <Nav>
           <Link href={SITE_PATH.HOME.NOTICE}>
