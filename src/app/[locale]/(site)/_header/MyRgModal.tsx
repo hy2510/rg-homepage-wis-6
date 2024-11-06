@@ -59,6 +59,8 @@ export function MyRgModal({ onCloseModal }: { onCloseModal?: () => void }) {
   // @Language 'common'
   const { t } = useTranslation()
 
+  const swingWebViewPlugin = (window as any).swingWebViewPlugin
+
   useOnLoadSuccessiveDailyGoal()
   useOnLoadSuccessiveStudy()
   useOnLoadAchieveLevelMaster()
@@ -132,6 +134,7 @@ export function MyRgModal({ onCloseModal }: { onCloseModal?: () => void }) {
       {viewName === 'level-master-award' && <LevelMasterAward />}
       {viewName === 'challenge-award' && <ChallengeAward />}
       {viewName === 'study-setting' && <SetStudyMode />}
+      {/* <div onClick={() => {swingWebViewPlugin.app.webview.clearCache()}}>캐시삭제</div> */}
     </Modal>
   )
 }

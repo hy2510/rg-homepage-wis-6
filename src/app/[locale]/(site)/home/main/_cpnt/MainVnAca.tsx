@@ -32,6 +32,7 @@ import {
   AdBannersGroup,
   HomeBanner,
   HomeCustomerCenterVn,
+  HomeCustomerCenterVnAca,
   NoticeBanner,
 } from '@/ui/modules/home-main-components/home-main-ad-banners'
 import LogIn from '@/ui/modules/home-main-components/home-main-log-in'
@@ -161,7 +162,7 @@ function MainComponent({ platform }: { platform: string }) {
           <HomeBanner title='Gallery' bgImage='/src/images/@home/cards/gallery.png' href='' />
         </div>
         <div className={style.row_6}>
-          <HomeCustomerCenterVn />
+          <HomeCustomerCenterVnAca />
         </div>
       </main>
     </>

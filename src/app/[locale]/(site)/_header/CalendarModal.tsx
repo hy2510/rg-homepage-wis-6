@@ -648,7 +648,8 @@ const CalendarDetailModeBody = ({
           )} */}
           <span>{t('t022')}</span>
           {tabButtonStatus === 'passed' && (
-            <span>{t('t023', { num: monthlyBooks })}</span>
+            // <span>{t('t023', { num: monthlyBooks })}</span>
+            <span>{monthlyBooks}</span>
           )}
         </div>
         <div

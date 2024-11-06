@@ -66,11 +66,17 @@
   border: 2px solid var(--yellow);
   background-color: #fffae4;
   padding: var(--space-s);
+  padding-left: var(--space-xxs);
   display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: var(--space-s);
+  grid-template-columns: 100px 1fr;
+  // gap: var(--space-s);
+  align-items: center;
   @media (prefers-color-scheme: no-preference) {
     background-color: var(--yellow);
+  }
+  img {
+    width: 100%;
+    height: auto;
   }
   .friends_entry_image {
     display: flex;
@@ -224,6 +230,7 @@
 
 // 퀘스트 모달 > 레벨 마스터
 .level_master_progress {
+  font-size: 0.9em;
   .comment {
     margin: var(--space-m) 0;
   }
@@ -248,7 +255,7 @@
       gap: var(--space-xxs);
       padding: var(--space-xs);
       color: var(--white);
-      font-size: var(--text-l);
+      font-size: var(--text-m);
       font-weight: 700;
       opacity: 0.7;
       cursor: pointer;
@@ -314,8 +321,8 @@
     }
     .status {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-xs);
+      grid-template-columns: 1fr 80px;
+      // gap: var(--space-xs);
       font-weight: 500;
       text-align: end;
       &.master {

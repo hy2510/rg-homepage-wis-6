@@ -114,10 +114,10 @@ function MainComponent({ platform }: { platform: string }) {
             <LogIn isLogin={isLogin} onClick={onClickMainLoginButton} />
           </div>
         </div>
-        <HomeMainQuickMenu label='자주 찾는 메뉴'>
-          <HomeMainQuickMenuItem title='학습 이용 방법' href='/home/user-guide' bgColor='#E8EBED' imgSrc='/src/images/@home/quick-menu-icon/find.png' />
-          <HomeMainQuickMenuItem title='랭킹' href='/ranking' bgColor='#FFF3BB' imgSrc='/src/images/@home/quick-menu-icon/star.png' />
-          <HomeMainQuickMenuItem title='신규 도서' href='/home/main/rg-news/new-contents/' bgColor='#D9F8FF' imgSrc='/src/images/@home/quick-menu-icon/new_book.png' />
+        <HomeMainQuickMenu label='Quick Menu'>
+          <HomeMainQuickMenuItem title='How to Use' href='/home/user-guide' bgColor='#E8EBED' imgSrc='/src/images/@home/quick-menu-icon/find.png' />
+          <HomeMainQuickMenuItem title='Ranking' href='/ranking' bgColor='#FFF3BB' imgSrc='/src/images/@home/quick-menu-icon/star.png' />
+          <HomeMainQuickMenuItem title='New Books' href='/home/main/rg-news/new-contents/' bgColor='#D9F8FF' imgSrc='/src/images/@home/quick-menu-icon/new_book.png' />
         </HomeMainQuickMenu>
         <div className={style.row_3}>
           <RgNewsTable>
@@ -153,10 +153,10 @@ function MainComponent({ platform }: { platform: string }) {
           </div>
         </div>
         <div className={style.row_5}>
-          <HomeBanner title='리딩게이트 소개' comment='미래를 여는 행복한 습관! 리딩게이트의 세계에 오신 것을 환영합니다!' bgImage='/src/images/@home/img_post_card_bg_default.svg' href='/home/about-to-school' />
-          <HomeBanner title='학습 이용 방법' comment='어렵지 않아요. 차근차근 안내를 따라 학습해 보세요!' bgImage='/src/images/@home/cards/how_to_use.svg' href='/home/user-guide' />
-          <HomeBanner title='랭킹' comment='친구들과 함께 성장하는 즐거움!' bgImage='/src/images/@home/cards/ranking.png' href='/ranking' />
-          <HomeBanner title='갤러리' bgImage='/src/images/@home/cards/gallery.png' href='' />
+          <HomeBanner title='About Reading Gate' comment='Welcome to the Reading Gate! A Happy Habit Opening the Future!' bgImage='/src/images/@home/img_post_card_bg_default.svg' href='/home/about-to-school' />
+          <HomeBanner title='How to Use' comment='It’s not difficult. Follow the steps carefully and start learning!' bgImage='/src/images/@home/cards/how_to_use.svg' href='/home/user-guide' />
+          <HomeBanner title='Ranking' comment='The joy of growing together with friends!' bgImage='/src/images/@home/cards/ranking.png' href='/ranking' />
+          <HomeBanner title='Gallery' bgImage='/src/images/@home/cards/gallery.png' href='' />
         </div>
         <div className={style.row_6}>
           <HomeCustomerCenterGlobal />

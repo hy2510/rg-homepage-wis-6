@@ -559,6 +559,69 @@ export const HomeCustomerCenterVn = () => {
   )
 }
 
+export const HomeCustomerCenterVnAca = () => {
+  const style = useStyle(STYLE_ID)
+
+  return (
+    <AdBannerType4>
+      <div className={style.home_banner}>
+        <div>
+          <div style={{marginBottom: '10px'}}>
+            <Image src='/src/images/@home/logo_color_full.svg' width={275} height={36} alt='' style={{width: 'auto', height: '24px'}} />
+          </div>
+          <Link href='https://concrete-meteor-3e2.notion.site/H-ng-d-n-cho-trung-t-m-ti-ng-Anh-1294e876aa85803aaf94f5a233074b25' target='_blank'>
+            <div className={`${style.title} ${style.title_link}`}>Hỗ trợ khách hàng</div>
+          </Link>
+        </div>
+        <div className={style.customer_center_menu_list}>
+          <Link href='https://concrete-meteor-3e2.notion.site/T-M-HI-U-V-READING-GATE-1294e876aa858121b9c4df0817a1a81e' target='_blank'>
+            <div className={`${style.menu_item} ${style.bg001}`}>
+              <span>TÌM HIỂU VỀ READING GATE</span>
+              <div className={style.bg_image}></div>
+            </div>
+          </Link>
+          <Link href='https://concrete-meteor-3e2.notion.site/H-NG-D-N-S-D-NG-1294e876aa85817d9c64d3be968377f6' target='_blank'>
+            <div className={`${style.menu_item} ${style.bg002}`}>
+              <span>HƯỚNG DẪN SỬ DỤNG</span>
+              <div className={style.bg_image}></div>
+            </div>
+          </Link>
+          <Link href='https://concrete-meteor-3e2.notion.site/THI-T-B-S-D-NG-1294e876aa8581d18f1eefc4d236fce6' target='_blank'>
+            <div className={`${style.menu_item} ${style.bg003}`}>
+              <span>THIẾT BỊ SỬ DỤNG</span>
+              <div className={style.bg_image}></div>
+            </div>
+          </Link>
+          {/* <Link href='https://ossified-smell-f52.notion.site/cf1d4f5a54654ded8a2ad92b9b7ce3c9' target='_blank'>
+            <div className={`${style.menu_item} ${style.bg004}`}>
+              <span>원격지원</span>
+              <div className={style.bg_image}></div>
+            </div>
+          </Link> */}
+          <Link href='https://concrete-meteor-3e2.notion.site/H-C-LI-U-1294e876aa858149b095eb25ddd751fa' target='_blank'>
+            <div className={`${style.menu_item} ${style.bg005}`}>
+              <span>HỌC LIỆU</span>
+              <div className={style.bg_image}></div>
+            </div>
+          </Link>
+          {/* <Link href='https://ossified-smell-f52.notion.site/f72c92a304ff4548bd1454378bf23eb0' target='_blank'>
+            <div className={`${style.menu_item} ${style.bg006}`}>
+              <span>이벤트</span>
+              <div className={style.bg_image}></div>
+            </div>
+          </Link> */}
+          <Link href='https://concrete-meteor-3e2.notion.site/RGVN-Q-A-1204e876aa8580209e4bc119829071e0' target='_balnk'>
+            <div className={`${style.menu_item} ${style.bg007}`}>
+              <span>RGVN Q&A</span>
+              <div className={style.bg_image}></div>
+            </div>
+          </Link>
+        </div>
+      </div>
+    </AdBannerType4>
+  )
+}
+
 export const HomeCustomerCenterGlobal = () => {
   const style = useStyle(STYLE_ID)
 
@@ -570,43 +633,43 @@ export const HomeCustomerCenterGlobal = () => {
             <Image src='/src/images/@home/logo_color_full.svg' width={275} height={36} alt='' style={{width: 'auto', height: '24px'}} />
           </div>
           <Link href='https://ossified-smell-f52.notion.site/RG-a8fc674ab32f458ca70d659e1916e34c' target='_blank'>
-            <div className={`${style.title} ${style.title_link}`}>고객지원</div>
+            <div className={`${style.title} ${style.title_link}`}>Customer Support</div>
           </Link>
         </div>
         <div className={style.customer_center_menu_list}>
           <Link href='https://ossified-smell-f52.notion.site/a4cce8ae154943808cc48a9e5b60327b' target='_blank'>
             <div className={`${style.menu_item} ${style.bg001}`}>
-              <span>리딩게이트가 처음이신가요?</span>
+              <span>First-Time User</span>
               <div className={style.bg_image}></div>
             </div>
           </Link>
           <Link href='https://ossified-smell-f52.notion.site/d7da80412132466e9fdf7667d34dd1de' target='_blank'>
             <div className={`${style.menu_item} ${style.bg002}`}>
-              <span>학습가이드</span>
+              <span>Study Guide</span>
               <div className={style.bg_image}></div>
             </div>
           </Link>
           <Link href='https://ossified-smell-f52.notion.site/983726afd0934c3a8157bf52331d06ec' target='_blank'>
             <div className={`${style.menu_item} ${style.bg003}`}>
-              <span>사용환경</span>
+              <span>Specifications</span>
               <div className={style.bg_image}></div>
             </div>
           </Link>
           <Link href='https://ossified-smell-f52.notion.site/cf1d4f5a54654ded8a2ad92b9b7ce3c9' target='_blank'>
             <div className={`${style.menu_item} ${style.bg004}`}>
-              <span>원격지원</span>
+              <span>Remote Support</span>
               <div className={style.bg_image}></div>
             </div>
           </Link>
           <Link href='https://ossified-smell-f52.notion.site/4494d64673004eda9af91f9d613ec687' target='_blank'>
             <div className={`${style.menu_item} ${style.bg005}`}>
-              <span>자료실</span>
+              <span>Download Center</span>
               <div className={style.bg_image}></div>
             </div>
           </Link>
           <Link href='https://ossified-smell-f52.notion.site/f72c92a304ff4548bd1454378bf23eb0' target='_blank'>
             <div className={`${style.menu_item} ${style.bg006}`}>
-              <span>이벤트</span>
+              <span>Event</span>
               <div className={style.bg_image}></div>
             </div>
           </Link>

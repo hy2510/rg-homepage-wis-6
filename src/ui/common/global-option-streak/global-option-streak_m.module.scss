@@ -91,7 +91,7 @@
 .check_point {
   display: flex;
   align-items: stretch;
-  gap: var(--space-m);
+  gap: var(--space-xxs);
   &:nth-last-child(1) {
     .check_mark {
       .line {

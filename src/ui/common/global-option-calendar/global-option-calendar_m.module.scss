@@ -55,20 +55,22 @@
         }
       }
       .monthly_study_status_container {
-        min-width: 100%;
+        width: 100%;
+        max-width: calc(100vw - 30px);
         display: flex;
         flex-direction: column;
         gap: var(--space-xxs);
         font-size: 0.9em;
         .monthly_study_status {
           width: 100%;
-          min-width: 300px;
+          max-width: calc(100vw - 30px);
           border-radius: var(--round-full);
           border: 2.5px solid var(--blue);
           background: var(--light);
           -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
           padding: 6px 18px;
+          overflow-x: auto;
         }
         .attend_status {
           display: flex;
@@ -193,10 +195,17 @@
 
 // 캘린더 모달 > 상세보기 헤더정보
 .calendar_detail_mode_info {
+  margin: auto;
+  width: fit-content;
   .calendar_detail_mode_info_container {
     display: flex;
     justify-content: center;
     gap: var(--space-xxs);
+    width: fit-content;
+    span {
+      display: inline-block;
+      white-space: nowrap;
+    }
     .goal_point_fail,
     .goal_point_pass,
     .goal_passed_fail,
