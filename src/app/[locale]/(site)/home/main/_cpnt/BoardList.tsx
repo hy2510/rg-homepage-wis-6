@@ -31,6 +31,7 @@ export default function BoardList({
               date={a.date}
               href={a.link}
               image={a.image}
+              grid={grid}
             />
           )
         })}

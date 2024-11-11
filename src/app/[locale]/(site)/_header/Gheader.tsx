@@ -133,6 +133,7 @@ export default function Gheader() {
   const { customLogo } = useSiteBlueprint()
 
   const styleDodoABC = `${pathname.indexOf(SITE_PATH.BASIC.DODO_ABC) != -1 ? ` ${style.dodo_abc}` : ''}`
+  const styleAbout = `${pathname.indexOf(SITE_PATH.CATALOG.CATALOG) != -1 ? style.about : ''}`
 
   useEffect(() => {
     if (modalViewName) {
@@ -147,7 +148,7 @@ export default function Gheader() {
   }
   return (
     <>
-      <div className={`${style.global_header}${styleDodoABC}`}>
+      <div className={`${style.global_header} ${styleDodoABC} ${styleAbout}`}>
         <div className={`${style.global_header_container} container`}>
           <div className={style.company_logo}>
             <a href={SITE_PATH.HOME.MAIN}>

@@ -1,8 +1,17 @@
 import { supportLanguages } from '@/localization/localize-config'
 
+const CATALOG = {
+  CATALOG: '/catalog',
+  BASIC: '/catalog/dodo-abc',
+  EBOOK: '/catalog/ebook',
+  PBOOK_QUIZ: '/catalog/pbook-quiz',
+  LEVEL_MASTER: '/catalog/level-master',
+}
+
 const HOME = {
   MAIN: '/home/main',
   NOTICE: '/home/main/rg-news/notice',
+  GALLERY: '/home/main/rg-news/gallery',
   NEWS_LETTER: '/home/main/rg-news/newsletter',
   NEW_CONTENTS: '/home/main/rg-news/new-contents',
   INFOGRAPHIC: '/home/main/rg-news/infographic',
@@ -11,6 +20,9 @@ const HOME = {
   EVENT_READING_CAMPAIN: '/home/main/rg-news/campaign',
   NEWS_POST: '/home/main/rg-news-post',
   CUSTOMER_INTERVIEW: '/home/customer-review/interview',
+  HALL_OF_FAME: '/home/hall-of-fame',
+  HALL_OF_FAME_STUDENT: '/home/hall-of-fame/student',
+  HALL_OF_FAME_PARENTS: '/home/hall-of-fame/parents',
   SNS_REVIEW: '/home/customer-review/sns',
   MEMBERSHIP_INTRODUCE: '/home/rg-membership/introduction',
   MEMBERSHIP_PAYMENT: '/home/rg-membership/payment/purchase',
@@ -189,6 +201,7 @@ export const EXTERNAL_URL = {
 }
 
 const SITE_PATH = {
+  CATALOG,
   HOME,
   ACCOUNT,
   BASIC,

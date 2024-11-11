@@ -26,6 +26,7 @@ import {
   HomeBannerRgShopSchool,
   HomeBannerRgShopWorkbookSchool,
   HomeCustomerCenter,
+  HomeCustomerCenterKrSchool,
   NoticeBanner,
 } from '@/ui/modules/home-main-components/home-main-ad-banners'
 import LogIn from '@/ui/modules/home-main-components/home-main-log-in'
@@ -103,8 +104,9 @@ function MainComponent({ platform }: { platform: string }) {
           <HomeMainQuickMenuItem title='학습 이용 방법' href='/home/user-guide' bgColor='#E8EBED' imgSrc='/src/images/@home/quick-menu-icon/find.png' />
           <HomeMainQuickMenuItem title='랭킹' href='/ranking' bgColor='#FFF3BB' imgSrc='/src/images/@home/quick-menu-icon/star.png' />
           <HomeMainQuickMenuItem title='신규 도서' href='/home/main/rg-news/new-contents/' bgColor='#D9F8FF' imgSrc='/src/images/@home/quick-menu-icon/new_book.png' />
-          <HomeMainQuickMenuItem title='이용권 구매하기' href='/home/rg-membership/payment/purchase' bgColor='#D8F6E5' imgSrc='/src/images/@home/quick-menu-icon/payment.png' />
-          <HomeMainQuickMenuItem title='워크북 구매하기' href='https://brand.naver.com/readinggate/category/97ef382000f947ab90f05041ea6b1f0c?cp=1' target='_blank' bgColor='#E8F1FF' imgSrc='/src/images/@home/quick-menu-icon/work_book.png' />
+          {/* 결제를 지원하는 학교만 표시 */}
+          {/* <HomeMainQuickMenuItem title='결제' href='/home/rg-membership/payment/purchase' bgColor='#D8F6E5' imgSrc='/src/images/@home/quick-menu-icon/payment.png' /> */}
+          <HomeMainQuickMenuItem title='워크북 구매하기' href='https://ossified-smell-f52.notion.site/0b03d81aaa0e43f89ed5a67b5c84d3f1' target='_blank' bgColor='#E8F1FF' imgSrc='/src/images/@home/quick-menu-icon/work_book.png' />
         </HomeMainQuickMenu>
         <div className={style.row_3}>
           <RgNewsTable>
@@ -156,7 +158,7 @@ function MainComponent({ platform }: { platform: string }) {
         </div>
         <div className={style.row_6}>
           <HomeBanner title='랭킹' comment='친구들과 함께 성장하는 즐거움!' bgImage='/src/images/@home/cards/ranking.png' href='/ranking' />
-          <HomeCustomerCenter />
+          <HomeCustomerCenterKrSchool />
         </div>
         <div className={style.row_7}>
           <HomeBannerChanner title1='리딩게이트' title2='공식 카페' linkTxt1='RG에 빠진 가족' link1='https://cafe.naver.com/readinggatecafe?iframe_url=/ArticleList.nhn%3Fsearch.clubid=29561033%26search.menuid=30%26search.boardtype=L' linkTxt2='영어 독서왕 대상 후기' link2='https://cafe.naver.com/readinggatecafe?iframe_url=/ArticleList.nhn%3Fsearch.clubid=29561033%26search.menuid=113%26search.boardtype=L' bgColor='#5B2390' bgImage='/src/images/@home/channer/channer_cafe.svg' />

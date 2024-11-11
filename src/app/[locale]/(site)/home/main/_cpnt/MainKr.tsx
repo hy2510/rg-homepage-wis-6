@@ -126,7 +126,7 @@ function MainComponent({ platform }: { platform: string }) {
           <div className={style.col_1}>
             <AdBannerType1
               title={''}
-              href={''}
+              href={SITE_PATH.HOME.HALL_OF_FAME_STUDENT}
               imgSrc={'/src/images/@home/cards/hall_of_fame.png'}
               width={640}
               height={640}

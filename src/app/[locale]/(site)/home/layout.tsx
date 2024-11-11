@@ -105,6 +105,13 @@ export default function Layout({ children }: { children?: ReactNode }) {
       </div>
       {country.korea && (
         <div className={style.chatbot_area}>
+          <a href={'https://guest2.readinggate.com/ko/home/main/rg-news-post/891'} target="_blank">
+            <div
+              className={style.chat_icon}
+              style={{
+                backgroundImage: `url('/src/images/@chatbot-icon/chatbot_icon_aca.png')`,
+              }}></div>
+          </a>
           <a href={EXTERNAL_URL.kakaoChannel} target="_blank">
             <div
               className={style.chat_icon}

@@ -798,21 +798,23 @@ export const NoticeBoardItem = ({
   date,
   href,
   image,
+  grid,
 }: {
   title?: string
   date?: string
   href?: string
   image?: string
+  grid?: boolean
 }) => {
   const style = useStyle(STYLE_ID)
 
-  const styleGrid = image
+  const styleGrid = grid
     ? style.notice_board_item_grid
     : style.notice_board_item
 
   return (
     <div className={`${styleGrid}`}>
-      {image ? (
+      {grid && image ? (
         <>
           <Link href={href ? href : ''} target="_self">
             <div className={style.thumbnail_image}>

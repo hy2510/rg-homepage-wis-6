@@ -7,5 +7,5 @@ import MainVnAca from './_cpnt/MainVnAca'
 import MainGlobalAca from './_cpnt/MainGlobalAca'
 
 export default async function Page() {
-  return <MainGlobalAca />
+  return <MainKrAca />
 }

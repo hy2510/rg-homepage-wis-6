@@ -57,6 +57,7 @@ function MenuKorea() {
   const connectChallenge = pathname.indexOf('challenge') != -1
   const connectSuperstar = pathname.indexOf('superstar') != -1
   const connectCampaign = pathname.indexOf('campaign') != -1
+  const connectGallery = pathname.indexOf('gallery') != -1
 
   const { isChallengeMenu, isNewsLetter } = useSiteBlueprint()
   return (
@@ -82,6 +83,9 @@ function MenuKorea() {
       </Link>
       <Link href={SITE_PATH.HOME.EVENT_READING_CAMPAIN}>
         <NavItem active={connectCampaign}>{t('t332')}</NavItem>
+      </Link>
+      <Link href={SITE_PATH.HOME.GALLERY}>
+        <NavItem active={connectGallery}>{t('t770')}</NavItem>
       </Link>
     </>
   )

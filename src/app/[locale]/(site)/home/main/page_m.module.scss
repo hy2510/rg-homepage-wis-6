@@ -529,7 +529,8 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-m);
-  padding-top: calc(var(--space-xs) + 10px);
+  padding-top: var(--space-m);
+  // padding-top: calc(var(--space-xs) + 10px);
   margin-bottom: var(--space-l);
   @media (orientation: landscape) {
     @include landscape;
@@ -544,7 +545,8 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-m);
-  padding-top: calc(var(--space-xs) + 10px);
+  padding-top: var(--space-m);
+  // padding-top: calc(var(--space-xs) + 10px);
   margin-bottom: var(--space-l);
   @media (orientation: landscape) {
     @include landscape;
@@ -559,7 +561,8 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-m);
-  padding-top: calc(var(--space-xs) + 10px);
+  padding-top: var(--space-m);
+  // padding-top: calc(var(--space-xs) + 10px);
   margin-bottom: var(--space-l);
   @media (orientation: landscape) {
     @include landscape(1fr 1fr, 1fr 1fr, 1fr, 1fr);
@@ -574,7 +577,8 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-m);
-  padding-top: calc(var(--space-xs) + 10px);
+  padding-top: var(--space-m);
+  // padding-top: calc(var(--space-xs) + 10px);
   margin-bottom: var(--space-l);
   @media (orientation: landscape) {
     @include landscape(1fr 1fr, 1fr 1fr, 1fr);
@@ -589,7 +593,8 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-m);
-  padding-top: calc(var(--space-xs) + 10px);
+  padding-top: var(--space-m);
+  // padding-top: calc(var(--space-xs) + 10px);
   margin-bottom: var(--space-l);
   @media (orientation: landscape) {
     @include landscape(1fr 1fr, 1fr 1fr, 1fr, 1fr);
@@ -604,7 +609,8 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-m);
-  padding-top: calc(var(--space-xs) + 10px);
+  padding-top: var(--space-m);
+  // padding-top: calc(var(--space-xs) + 10px);
   margin-bottom: var(--space-l);
   @media (orientation: landscape) {
     @include landscape(1fr 1fr, 1fr 1fr, 1fr, 1fr);

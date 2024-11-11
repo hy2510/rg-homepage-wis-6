@@ -496,6 +496,126 @@ export const HomeCustomerCenter = () => {
   )
 }
 
+export const HomeCustomerCenterKrAca = () => {
+  const style = useStyle(STYLE_ID)
+
+  return (
+    <AdBannerType4>
+      <div className={style.home_banner}>
+        <div>
+          <div style={{marginBottom: '10px'}}>
+            <Image src='/src/images/@home/logo_color_full.svg' width={275} height={36} alt='' style={{width: 'auto', height: '24px'}} />
+          </div>
+          <Link href='https://ossified-smell-f52.notion.site/44d6a2eb4c1c4199bc5745077033b1ea' target='_blank'>
+            <div className={`${style.title} ${style.title_link}`}>고객지원</div>
+          </Link>
+        </div>
+        <div className={style.customer_center_menu_list}>
+          <Link href='https://ossified-smell-f52.notion.site/b6e166ab71814ab6a9703fc64b88b22f' target='_blank'>
+            <div className={`${style.menu_item} ${style.bg001}`}>
+              <span>접속 및 로그인</span>
+              <div className={style.bg_image}></div>
+            </div>
+          </Link>
+          <Link href='https://ossified-smell-f52.notion.site/d44e636097fd4d2b81bf38cd0f0cba62' target='_blank'>
+            <div className={`${style.menu_item} ${style.bg002}`}>
+              <span>학습가이드</span>
+              <div className={style.bg_image}></div>
+            </div>
+          </Link>
+          <Link href='https://ossified-smell-f52.notion.site/e4db43514eb04259bdb8e4af21e36757' target='_blank'>
+            <div className={`${style.menu_item} ${style.bg003}`}>
+              <span>사용환경</span>
+              <div className={style.bg_image}></div>
+            </div>
+          </Link>
+          <Link href='https://ossified-smell-f52.notion.site/1fcb3ff426cc44d288532b1ea78f3b1b' target='_blank'>
+            <div className={`${style.menu_item} ${style.bg004}`}>
+              <span>원격지원</span>
+              <div className={style.bg_image}></div>
+            </div>
+          </Link>
+          <Link href='https://ossified-smell-f52.notion.site/fbb7bc98ff8244fb8e134587e9c1a802' target='_blank'>
+            <div className={`${style.menu_item} ${style.bg005}`}>
+              <span>자료실</span>
+              <div className={style.bg_image}></div>
+            </div>
+          </Link>
+          <Link href='https://ossified-smell-f52.notion.site/FAQ-c6b4a74dea634fadac2908626a1d2043' target='_balnk'>
+            <div className={`${style.menu_item} ${style.bg007}`}>
+              <span>FAQ</span>
+              <div className={style.bg_image}></div>
+            </div>
+          </Link>
+        </div>
+      </div>
+    </AdBannerType4>
+  )
+}
+
+export const HomeCustomerCenterKrSchool = () => {
+  const style = useStyle(STYLE_ID)
+
+  return (
+    <AdBannerType4>
+      <div className={style.home_banner}>
+        <div>
+          <div style={{marginBottom: '10px'}}>
+            <Image src='/src/images/@home/logo_color_full.svg' width={275} height={36} alt='' style={{width: 'auto', height: '24px'}} />
+          </div>
+          <Link href='https://ossified-smell-f52.notion.site/bcdb1eaf03a34c34a4a0567eec292601' target='_blank'>
+            <div className={`${style.title} ${style.title_link}`}>고객지원</div>
+          </Link>
+        </div>
+        <div className={style.customer_center_menu_list}>
+          <Link href='https://ossified-smell-f52.notion.site/745eb73186d54f5e9bf9225c5dc4b83e' target='_blank'>
+            <div className={`${style.menu_item} ${style.bg001}`}>
+              <span>접속 및 로그인</span>
+              <div className={style.bg_image}></div>
+            </div>
+          </Link>
+          <Link href='https://ossified-smell-f52.notion.site/b7e7edad6129407784aa700422bd3f04' target='_blank'>
+            <div className={`${style.menu_item} ${style.bg002}`}>
+              <span>학습가이드</span>
+              <div className={style.bg_image}></div>
+            </div>
+          </Link>
+          <Link href='https://ossified-smell-f52.notion.site/42ddf8c344a34272bc72e5f887cc81a0' target='_blank'>
+            <div className={`${style.menu_item} ${style.bg003}`}>
+              <span>사용환경</span>
+              <div className={style.bg_image}></div>
+            </div>
+          </Link>
+          <Link href='https://ossified-smell-f52.notion.site/9c4ff87c7766422a8305d56adb5d1ea1' target='_blank'>
+            <div className={`${style.menu_item} ${style.bg004}`}>
+              <span>원격지원</span>
+              <div className={style.bg_image}></div>
+            </div>
+          </Link>
+          <Link href='https://ossified-smell-f52.notion.site/4565b29580904f6f8f4ab1c2f609653d' target='_blank'>
+            <div className={`${style.menu_item} ${style.bg005}`}>
+              <span>자료실</span>
+              <div className={style.bg_image}></div>
+            </div>
+          </Link>
+          <Link href='https://ossified-smell-f52.notion.site/319f3bc9ee2a41c7bc34d4669c840140' target='_blank'>
+            <div className={`${style.menu_item} ${style.bg006}`}>
+              <span>이벤트</span>
+              <div className={style.bg_image}></div>
+            </div>
+          </Link>
+          <Link href='https://ossified-smell-f52.notion.site/FAQ-e474efe77a8a4bd783b4d4b1c4ff629c' target='_balnk'>
+            <div className={`${style.menu_item} ${style.bg007}`}>
+              <span>FAQ</span>
+              <div className={style.bg_image}></div>
+            </div>
+          </Link>
+        </div>
+      </div>
+    </AdBannerType4>
+  )
+}
+
 export const HomeCustomerCenterVn = () => {
   const style = useStyle(STYLE_ID)
 
@@ -749,7 +869,7 @@ export const HomeBannerDonation = ({link, bgImage}: {link: string; bgImage: stri
 
 export const NoticeBanner = ({children, bgColor, href}: {children: ReactNode; bgColor?: string; href?: string}) => {
   return (
-    <div className='container' style={{padding: '20px', paddingBottom: 0}}>
+    <div className='container' style={{padding: '20px 15px 0'}}>
       <Link href={href ? href : ''} target={href ? '_blank' : ''}>
         <div style={{backgroundColor: bgColor ? bgColor : '#85E7E6', textAlign: 'center', borderRadius: '12px', minHeight: '60px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>{children}</div>
       </Link>
