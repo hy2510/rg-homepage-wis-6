@@ -22,8 +22,9 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { ReactNode, useEffect, useRef, useState } from 'react'
 import { useFetchFindCustomer } from '@/client/store/customer/info/hook'
-import { Button, CheckBox, TextField } from '@/ui/common/common-components'
-import { useStyle } from '@/ui/context/StyleContext'
+import { Button, CheckBox, Margin, TextField } from '@/ui/common/common-components'
+import { useScreenMode, useStyle } from '@/ui/context/StyleContext'
+import ChooseLanguage from '@/ui/common/ChooseLanguage'
 
 const STYLE_ID = 'page_account_list'
 
@@ -79,6 +80,8 @@ export default function Page() {
       <div className={style.catchphrase}>
         <div className={style.brand_name}>{t('t206')}</div>
         <div className={style.sentence}>{t('t207')}</div>
+        <Margin height={20} />
+        <ChooseLanguage />
       </div>
       <div className={`${style.account_card_list} container compact`}>
         {accounts &&

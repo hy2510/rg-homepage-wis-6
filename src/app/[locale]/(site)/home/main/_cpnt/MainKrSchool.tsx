@@ -27,6 +27,7 @@ import {
   HomeBannerRgShopWorkbookSchool,
   HomeCustomerCenter,
   HomeCustomerCenterKrSchool,
+  HomePartnership,
   NoticeBanner,
 } from '@/ui/modules/home-main-components/home-main-ad-banners'
 import LogIn from '@/ui/modules/home-main-components/home-main-log-in'
@@ -143,7 +144,7 @@ function MainComponent({ platform }: { platform: string }) {
         <div className={style.row_4}>
           <div className={style.col_1}>
             <HomeBanner title='RG 뉴스레터' txtColor='#fff' sub='2024년 10월' subColor='#fff' comment='하이도도 론칭, New Reading Gate, 티타늄 상패 증정식 ...' commentColor='#fff' bgColor='#038DF1' bgImage='/src/images/@home/cards/news_letter.svg' href='/home/main/rg-news/newsletter/' />
-            <HomeBanner title='인포그래픽' txtColor='#fff' sub='2023 학습' subColor='#F880C1' comment='리딩게이트 이용자들은 책을 어떻게, 얼마나 읽고 있을까요?' commentColor='#fff' bgColor='#1E254F' bgImage='/src/images/@home/cards/infographic.svg' href='/home/main/rg-news/newsletter/' />
+            <HomeBanner title='인포그래픽' txtColor='#fff' sub='학습' subColor='#F880C1' comment='리딩게이트 이용자들은 책을 어떻게, 얼마나 읽고 있을까요?' commentColor='#fff' bgColor='#1E254F' bgImage='/src/images/@home/cards/infographic.svg' href='/home/main/rg-news/newsletter/' />
           </div>
           <AdBannerType3
             bgImage='/src/images/@home/cards/king_of_reading.svg'
@@ -156,9 +157,10 @@ function MainComponent({ platform }: { platform: string }) {
           <HomeBannerRgShopSchool />
           <HomeBannerRgShopWorkbookSchool />
         </div>
-        <div className={style.row_6}>
-          <HomeBanner title='랭킹' comment='친구들과 함께 성장하는 즐거움!' bgImage='/src/images/@home/cards/ranking.png' href='/ranking' />
+        <div className={style.row_6_kr}>
           <HomeCustomerCenterKrSchool />
+          <HomeBanner title='랭킹' comment='친구들과 함께 성장하는 즐거움!' bgImage='/src/images/@home/cards/ranking.png' href='/ranking' />
+          <HomePartnership />
         </div>
         <div className={style.row_7}>
           <HomeBannerChanner title1='리딩게이트' title2='공식 카페' linkTxt1='RG에 빠진 가족' link1='https://cafe.naver.com/readinggatecafe?iframe_url=/ArticleList.nhn%3Fsearch.clubid=29561033%26search.menuid=30%26search.boardtype=L' linkTxt2='영어 독서왕 대상 후기' link2='https://cafe.naver.com/readinggatecafe?iframe_url=/ArticleList.nhn%3Fsearch.clubid=29561033%26search.menuid=113%26search.boardtype=L' bgColor='#5B2390' bgImage='/src/images/@home/channer/channer_cafe.svg' />

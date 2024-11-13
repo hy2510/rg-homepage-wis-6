@@ -4,6 +4,7 @@ import useTranslation from '@/localization/client/useTranslations'
 import Image from 'next/image'
 import ChooseLanguage from '@/ui/common/ChooseLanguage'
 import { useStyle } from '@/ui/context/StyleContext'
+import { Margin } from '@/ui/common/common-components'
 
 const STYLE_ID = 'page_sign_in'
 
@@ -19,9 +20,8 @@ export default function LoginFormIntro({
 
   return (
     <>
-      <div style={{ marginTop: 'var(--space-l)' }}>
-        <ChooseLanguage />
-      </div>
+      <Margin height={20} />
+      <ChooseLanguage />
       <div className={style.choose_user_type}>
         <div
           className={style.card}
@@ -29,8 +29,8 @@ export default function LoginFormIntro({
           <div className={style.symbol_image}>
             <Image
               src={'/src/images/@account/symbol_icon_indi.png'}
-              width={60}
-              height={66}
+              width={80}
+              height={80}
               alt=""
             />
           </div>

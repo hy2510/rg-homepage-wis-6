@@ -44,7 +44,12 @@ export default function localizationMiddleware(
         host === 'dev.readinggate.com:53000'
       ) {
         findLocale = KOREAN
-      } else if (host === 'vn.readinggate.com') {
+      } else if (
+        host === 'vn.readinggate.com' ||
+        host === 'rgvn.readinggate.com' ||
+        host === 'readingq.readinggate.com' ||
+        host === 'readingq2.readinggate.com'
+      ) {
         findLocale = VIETNAMESE
       } else {
         const sysLng = findLocaleByAcceptLanguage(

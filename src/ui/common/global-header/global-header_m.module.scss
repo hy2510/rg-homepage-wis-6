@@ -20,7 +20,7 @@
     height: 60px;
     padding: 0 15px;
     display: grid;
-    grid-template-columns: 50px 1fr;
+    grid-template-columns: 60px 1fr;
     .company_logo {
       display: flex;
       align-items: center;
@@ -251,7 +251,8 @@
   // padding-bottom: 10px;
   padding-bottom: env(safe-area-inset-bottom);
   background-color: var(--white);
-  box-shadow: 0 -3px 15px rgba($color: #000000, $alpha: 0.1);
+  border-top: 1px solid var(--gray3);
+  // box-shadow: 0 -3px 15px rgba($color: #000000, $alpha: 0.1);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -309,7 +310,7 @@
     align-items: center;
     justify-content: center;
     background: linear-gradient(100deg, #29c4e7 1%, #00a0fd 99%);
-    box-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.2);
+    // box-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.2);
     border-radius: var(--round-full);
     position: absolute;
     bottom: 15px;

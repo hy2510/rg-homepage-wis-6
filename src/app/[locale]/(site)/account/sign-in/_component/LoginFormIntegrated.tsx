@@ -240,6 +240,7 @@ function NationSelect({
         className={style.txt_sentence}
         dangerouslySetInnerHTML={{ __html: t261 }}></div>
       {nations.map((nation) => {
+        console.log(nation.countryCode, nation.customerId)
         return (
           <div
             key={nation.customerId}
@@ -251,6 +252,13 @@ function NationSelect({
           </div>
         )
       })}
+      <div
+        className={style.item_country}
+        onClick={() => {
+          onSelectNationListener('KR', '000172')
+        }}>
+        Other Countries
+      </div>
     </div>
   )
 }

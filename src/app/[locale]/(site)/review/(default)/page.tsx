@@ -87,6 +87,8 @@ function HistoryLayout() {
 
   const { studyOpen } = useSiteBlueprint()
 
+  const { target } = useSiteBlueprint()
+
   const onFirstPageReport = (
     startDate: DateObject,
     endDate: DateObject,
@@ -208,17 +210,19 @@ function HistoryLayout() {
               setView('speak')
             }
           }}>My Speak</NavItem>
-          <NavItem active={view === 'write'} onClick={() => {
-            if (view !== 'write') {
-              onFirstPageReport(
-                option.startDate || startDate,
-                option.endDate || endDate,
-                false,
-                'Writing',
-              )
-              setView('write')
-            }
-          }}>Writing Activity</NavItem>
+          {target.academy && 
+            <NavItem active={view === 'write'} onClick={() => {
+              if (view !== 'write') {
+                onFirstPageReport(
+                  option.startDate || startDate,
+                  option.endDate || endDate,
+                  false,
+                  'Writing',
+                )
+                setView('write')
+              }
+            }}>Writing Activity</NavItem>
+          }
         </Nav>
       </div>
       <main className={style.review}>

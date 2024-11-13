@@ -89,6 +89,9 @@ function PrivateFooter() {
         <Link href={SITE_PATH.HOME.MEMBERSHIP_PRIVACY_POLICY}>
           <div>{t('t419')}</div>
         </Link>
+        <Link href={SITE_PATH.ACCOUNT.GROUP_SEARCH}>
+          <div>{t('t259') + ' ' + t('t231')}</div>
+        </Link>
         <Link
           href={'https://util.readinggate.com/about_Rg/b2b/'}
           target="_blank">
@@ -177,7 +180,7 @@ function AcademyFooter() {
             </span>
           </div>
         )}
-        <RgServiceInform />
+        {/* <RgServiceInform /> */}
       </div>
     </>
   )

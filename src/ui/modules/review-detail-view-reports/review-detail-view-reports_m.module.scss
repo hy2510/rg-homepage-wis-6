@@ -459,8 +459,14 @@
 
 .speak_reports_list {
   display: grid;
-  gap: var(--space-l);
-  grid-template-columns: repeat(6, 1fr);
+  gap: var(--space-s);
+  grid-template-columns: repeat(3, 1fr);
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(6, 1fr);
+  }
 }
 
 .speak_report_item {
@@ -476,10 +482,10 @@
       cursor: pointer;
       filter: contrast(103%);
       border-radius: var(--round-l);
-      box-shadow:
-        rgba(0, 0, 0, 0.4) 0px 2px 4px,
-        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
-        rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+      // box-shadow:
+      //   rgba(0, 0, 0, 0.4) 0px 2px 4px,
+      //   rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+      //   rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     }
     @mixin mark {
       width: 50px;

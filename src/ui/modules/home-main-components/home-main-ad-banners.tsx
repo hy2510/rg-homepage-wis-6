@@ -246,7 +246,7 @@ export const HomeBannerRgShopWorkbookSchool = () => {
     <AdBannerType4 href='https://brand.naver.com/readinggate/category/97ef382000f947ab90f05041ea6b1f0c?cp=1' target='_blank'>
       <div className={style.home_banner} style={{backgroundImage: `url('/src/images/@home/shop/workbook_school.png')`}}>
         <div>
-          <div className={style.title}>Workbook 구매하기</div>
+          <div className={style.title}>워크북 구매하기</div>
         </div>
       </div>
     </AdBannerType4>
@@ -435,14 +435,15 @@ export const HomeBannerRgMembershipVn = () => {
 
 export const HomeCustomerCenter = () => {
   const style = useStyle(STYLE_ID)
+  const isMobile = useScreenMode() === 'mobile'
 
   return (
     <AdBannerType4>
       <div className={style.home_banner}>
         <div>
-          <div style={{marginBottom: '10px'}}>
-            <Image src='/src/images/@home/logo_color_full.svg' width={275} height={36} alt='' style={{width: 'auto', height: '24px'}} />
-          </div>
+          {!isMobile && <div style={{marginBottom: '10px'}}>
+            <Image src='/src/images/@home/logo_color_full.svg' width={275} height={36} alt='' style={{width: 'auto', height: '20px'}} />
+          </div>}
           <Link href='https://ossified-smell-f52.notion.site/RG-a8fc674ab32f458ca70d659e1916e34c' target='_blank'>
             <div className={`${style.title} ${style.title_link}`}>고객지원</div>
           </Link>
@@ -555,14 +556,15 @@ export const HomeCustomerCenterKrAca = () => {
 
 export const HomeCustomerCenterKrSchool = () => {
   const style = useStyle(STYLE_ID)
+  const isMobile = useScreenMode() === 'mobile'
 
   return (
     <AdBannerType4>
       <div className={style.home_banner}>
         <div>
-          <div style={{marginBottom: '10px'}}>
+          {!isMobile && <div style={{marginBottom: '10px'}}>
             <Image src='/src/images/@home/logo_color_full.svg' width={275} height={36} alt='' style={{width: 'auto', height: '24px'}} />
-          </div>
+          </div>}
           <Link href='https://ossified-smell-f52.notion.site/bcdb1eaf03a34c34a4a0567eec292601' target='_blank'>
             <div className={`${style.title} ${style.title_link}`}>고객지원</div>
           </Link>
@@ -752,48 +754,48 @@ export const HomeCustomerCenterGlobal = () => {
           <div style={{marginBottom: '10px'}}>
             <Image src='/src/images/@home/logo_color_full.svg' width={275} height={36} alt='' style={{width: 'auto', height: '24px'}} />
           </div>
-          <Link href='https://ossified-smell-f52.notion.site/RG-a8fc674ab32f458ca70d659e1916e34c' target='_blank'>
+          <Link href='https://ossified-smell-f52.notion.site/44d6a2eb4c1c4199bc5745077033b1ea' target='_blank'>
             <div className={`${style.title} ${style.title_link}`}>Customer Support</div>
           </Link>
         </div>
         <div className={style.customer_center_menu_list}>
-          <Link href='https://ossified-smell-f52.notion.site/a4cce8ae154943808cc48a9e5b60327b' target='_blank'>
+          <Link href='https://ossified-smell-f52.notion.site/b6e166ab71814ab6a9703fc64b88b22f' target='_blank'>
             <div className={`${style.menu_item} ${style.bg001}`}>
               <span>First-Time User</span>
               <div className={style.bg_image}></div>
             </div>
           </Link>
-          <Link href='https://ossified-smell-f52.notion.site/d7da80412132466e9fdf7667d34dd1de' target='_blank'>
+          <Link href='https://ossified-smell-f52.notion.site/d44e636097fd4d2b81bf38cd0f0cba62' target='_blank'>
             <div className={`${style.menu_item} ${style.bg002}`}>
               <span>Study Guide</span>
               <div className={style.bg_image}></div>
             </div>
           </Link>
-          <Link href='https://ossified-smell-f52.notion.site/983726afd0934c3a8157bf52331d06ec' target='_blank'>
+          <Link href='https://ossified-smell-f52.notion.site/e4db43514eb04259bdb8e4af21e36757' target='_blank'>
             <div className={`${style.menu_item} ${style.bg003}`}>
               <span>Specifications</span>
               <div className={style.bg_image}></div>
             </div>
           </Link>
-          <Link href='https://ossified-smell-f52.notion.site/cf1d4f5a54654ded8a2ad92b9b7ce3c9' target='_blank'>
+          <Link href='https://ossified-smell-f52.notion.site/1fcb3ff426cc44d288532b1ea78f3b1b' target='_blank'>
             <div className={`${style.menu_item} ${style.bg004}`}>
               <span>Remote Support</span>
               <div className={style.bg_image}></div>
             </div>
           </Link>
-          <Link href='https://ossified-smell-f52.notion.site/4494d64673004eda9af91f9d613ec687' target='_blank'>
+          <Link href='https://ossified-smell-f52.notion.site/fbb7bc98ff8244fb8e134587e9c1a802' target='_blank'>
             <div className={`${style.menu_item} ${style.bg005}`}>
               <span>Download Center</span>
               <div className={style.bg_image}></div>
             </div>
           </Link>
-          <Link href='https://ossified-smell-f52.notion.site/f72c92a304ff4548bd1454378bf23eb0' target='_blank'>
+          {/* <Link href='https://ossified-smell-f52.notion.site/f72c92a304ff4548bd1454378bf23eb0' target='_blank'>
             <div className={`${style.menu_item} ${style.bg006}`}>
               <span>Event</span>
               <div className={style.bg_image}></div>
             </div>
-          </Link>
-          <Link href='https://ossified-smell-f52.notion.site/FAQ-001c577a493e4f8f899ad94f8df17ed9' target='_balnk'>
+          </Link> */}
+          <Link href='https://ossified-smell-f52.notion.site/FAQ-c6b4a74dea634fadac2908626a1d2043' target='_balnk'>
             <div className={`${style.menu_item} ${style.bg007}`}>
               <span>FAQ</span>
               <div className={style.bg_image}></div>
@@ -802,6 +804,32 @@ export const HomeCustomerCenterGlobal = () => {
         </div>
       </div>
     </AdBannerType4>
+  )
+}
+
+export const HomePartnership = () => {
+  const style = useStyle(STYLE_ID)
+
+  return (
+    <div className={style.home_partnership}>
+      <div className={style.row}>
+        <div className={style.title}>P북 대여하러 가기</div>
+        <Link href={'https://www.woodo.kr/'} target='_blank' style={{height: '100%'}}>
+          <div className={`${style.partner_banner} ${style.woodo}`}></div>
+        </Link>
+      </div>
+      <div className={style.row}>
+        <div className={style.title}>오디오북 & 이북 제휴</div>
+        <div className={style.partner_banner_group}>
+          <Link href={'https://www.millie.co.kr/'} target='_blank' style={{height: '100%'}}>
+            <div className={`${style.partner_banner} ${style.millie}`}></div>
+          </Link>
+          <Link href={'https://www.storytel.com/kr'} target='_blank' style={{height: '100%'}}>
+            <div className={`${style.partner_banner} ${style.storytel}`}></div>
+          </Link>
+        </div>
+      </div>
+    </div>
   )
 }
 

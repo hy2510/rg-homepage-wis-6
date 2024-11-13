@@ -211,6 +211,14 @@
   }
 }
 
+.clear_cache_button {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: 10px;
+  font-size: var(--text-s);
+  color: var(--gray2);
+}
+
 .edit_phone_number {
   display: flex;
   flex-direction: column;

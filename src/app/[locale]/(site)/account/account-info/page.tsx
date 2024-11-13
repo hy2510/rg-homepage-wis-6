@@ -18,7 +18,7 @@ import {
   useStudentInfoMainPhone,
 } from '@/client/store/student/info/selector'
 import { CheckBox, TextField } from '@/ui/common/common-components'
-import { useStyle } from '@/ui/context/StyleContext'
+import { useScreenMode, useStyle } from '@/ui/context/StyleContext'
 import {
   BASE_TIME,
   isValidatePassword,
@@ -38,6 +38,9 @@ export default function Page() {
 
   // @language 'common'
   const { t } = useTranslation()
+
+  const isMobile = useScreenMode() === 'mobile'
+  const swingWebViewPlugin = (window as any).swingWebViewPlugin
 
   const { country, isPaymentable, paymentUrl, isShowStudyEndDay, studentOpen } =
     useSiteBlueprint()
@@ -414,6 +417,12 @@ export default function Page() {
             </AccordionItem>
           )}
         </div>
+        {isMobile && <div className={style.clear_cache_button} onClick={() => {
+        if (confirm('Do you want to delete the account list and app usage history?')) {
+          swingWebViewPlugin.app.webview.clearCache()
+          alert('Requested task completed.')
+        }
+        }}>Clear Cache</div>}
       </div>
     </main>
   )
