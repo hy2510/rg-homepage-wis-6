@@ -228,7 +228,7 @@ button {
   margin: 0 auto;
   padding: 20px;
   @media (pointer: coarse) {
-    padding: 0;
+    // padding: 0;
     padding-bottom: 35px;
     padding-left: var(--space-s);
     padding-right: var(--space-s);
