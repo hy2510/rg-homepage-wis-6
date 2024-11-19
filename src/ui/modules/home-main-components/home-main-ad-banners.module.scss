@@ -244,6 +244,12 @@
           background-image: url('/src/images/@home/customer_center/002.svg');
         }
       }
+      &.bg002_1 {
+        background-color: #EA6E0F;
+        .bg_image {
+          background-image: url('/src/images/@home/customer_center/002_1.svg');
+        }
+      }
       &.bg003 {
         background-color: #EF5450;
         .bg_image {
@@ -565,7 +571,8 @@
     .partner_banner_group {
       height: 100%;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      // grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       gap: var(--space-xs);
     }
   }

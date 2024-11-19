@@ -457,7 +457,13 @@ export const HomeCustomerCenter = () => {
           </Link>
           <Link href='https://ossified-smell-f52.notion.site/d7da80412132466e9fdf7667d34dd1de' target='_blank'>
             <div className={`${style.menu_item} ${style.bg002}`}>
-              <span>학습가이드</span>
+              <span>학습 가이드</span>
+              <div className={style.bg_image}></div>
+            </div>
+          </Link>
+          <Link href='https://ossified-smell-f52.notion.site/13cf0c72b174800683d0d79a7d2a8f74' target='_blank'>
+            <div className={`${style.menu_item} ${style.bg002_1}`}>
+              <span>이용권 구매 및 티켓등록</span>
               <div className={style.bg_image}></div>
             </div>
           </Link>
@@ -824,9 +830,9 @@ export const HomePartnership = () => {
           <Link href={'https://www.millie.co.kr/'} target='_blank' style={{height: '100%'}}>
             <div className={`${style.partner_banner} ${style.millie}`}></div>
           </Link>
-          <Link href={'https://www.storytel.com/kr'} target='_blank' style={{height: '100%'}}>
+          {/* <Link href={'https://www.storytel.com/kr'} target='_blank' style={{height: '100%'}}>
             <div className={`${style.partner_banner} ${style.storytel}`}></div>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>
@@ -897,7 +903,7 @@ export const HomeBannerDonation = ({link, bgImage}: {link: string; bgImage: stri
 
 export const NoticeBanner = ({children, bgColor, href}: {children: ReactNode; bgColor?: string; href?: string}) => {
   return (
-    <div className='container' style={{padding: '20px 15px 0'}}>
+    <div style={{padding: '20px 15px 0'}}>
       <Link href={href ? href : ''} target={href ? '_blank' : ''}>
         <div style={{backgroundColor: bgColor ? bgColor : '#85E7E6', textAlign: 'center', borderRadius: '12px', minHeight: '60px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>{children}</div>
       </Link>

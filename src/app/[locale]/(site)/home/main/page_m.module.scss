@@ -321,6 +321,7 @@
 
 @mixin landscape($row3: 1fr 1fr, $row3_col: 1fr 1fr, $row4_col: 1fr 1fr, $row6: calc(25% - 15px) 1fr, $row6kr: calc(50% - 10px) 1fr 1fr) {
   .row_1 {
+    padding-top: var(--space-m);
     display: grid;
     grid-template-columns: 700px 1fr;
     gap: var(--space-m);
@@ -425,6 +426,7 @@
 @mixin portrait($row3_col: 1fr 1fr, $row4_col: 1fr 1fr) {
   max-width: 600px !important;
   .row_1 {
+    padding-top: var(--space-m);
     display: flex;
     flex-direction: column;
     flex-flow: column-reverse;
