@@ -38,10 +38,10 @@
       position: absolute;
       z-index: 0;
       bottom: 0;
-      right: -20px;
+      right: 0;
       img {
-        width: 200px;
-        height: 200px;
+        width: auto;
+        height: 160px;
       }
       @media (orientation: portrait) {
         bottom: 20px;

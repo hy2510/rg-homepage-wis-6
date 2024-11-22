@@ -44,13 +44,13 @@ export default function LogIn({
         </div>
 
         <div className={style.position_img_1}>
-          <FlyChild />
-          {/* <Image
+          {/* <FlyChild /> */}
+          <Image
             alt=""
-            src="/src/images/@home/img_edmond.svg"
+            src="/src/images/@home/img_dodo_book.png"
             width={100}
             height={100}
-          /> */}
+          />
         </div>
       </div>
     </div>
