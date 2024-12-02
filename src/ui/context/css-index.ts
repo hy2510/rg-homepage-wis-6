@@ -90,6 +90,8 @@ import page_forgot_password from '@/app/[locale]/(site)/account/forgot-password/
 import page_forgot_password_m from '@/app/[locale]/(site)/account/forgot-password/page_m.module.scss'
 import page_group_search from '@/app/[locale]/(site)/account/group-search/page.module.scss'
 import page_group_search_m from '@/app/[locale]/(site)/account/group-search/page_m.module.scss'
+import page_group_move_class from '@/app/[locale]/(site)/account/group-move-class/page.module.scss'
+import page_group_move_class_m from '@/app/[locale]/(site)/account/group-move-class/page_m.module.scss'
 import page_account from '@/app/[locale]/(site)/account/page.module.scss'
 import page_account_m from '@/app/[locale]/(site)/account/page_m.module.scss'
 import page_sign_in from '@/app/[locale]/(site)/account/sign-in/page.module.scss'
@@ -406,6 +408,8 @@ export default function findStyle(id: string): {
       return { pc: page_about_vn, mobile: page_about_vn_m }
     case 'page_group_search':
       return { pc: page_group_search, mobile: page_group_search_m }
+    case 'page_group_move_class':
+      return { pc: page_group_move_class, mobile: page_group_move_class_m }
     // case 'page_catalog':
     //   return { pc: page_catalog, mobile: page_catalog_m }
     default:

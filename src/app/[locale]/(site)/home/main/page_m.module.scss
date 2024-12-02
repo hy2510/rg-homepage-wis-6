@@ -335,8 +335,12 @@
       gap: var(--space-xs);
       margin-top: var(--space-m);
       border-radius: var(--round-l);
-      background: linear-gradient(94deg, #CC3486 2.69%, #3C00C3 100%);
-      padding: var(--space-s);
+      background-color: #FFF0FB;
+      background-image: url('/src/images/@home/hi-dodo-banner/ball1.png'), url('/src/images/@home/hi-dodo-banner/ball2.png');
+      background-position: top -8px left -8px, bottom -16px right -16px;
+      background-size: 60px, 90px;
+      background-repeat: no-repeat, no-repeat;
+      padding: var(--space-xs);
       @media (max-width: 1024px) {
         margin-top: var(--space-xs);
         padding: var(--space-xxs);
@@ -438,8 +442,12 @@
       gap: var(--space-xs);
       margin-top: var(--space-m);
       border-radius: var(--round-l);
-      background: linear-gradient(94deg, #CC3486 2.69%, #3C00C3 100%);
-      padding: var(--space-s);
+      background-color: #FFF0FB;
+      background-image: url('/src/images/@home/hi-dodo-banner/ball1.png'), url('/src/images/@home/hi-dodo-banner/ball2.png');
+      background-position: top -8px left -8px, bottom -16px right -16px;
+      background-size: 60px, 90px;
+      background-repeat: no-repeat, no-repeat;
+      padding: var(--space-xs);
       @media (max-width: 1024px) {
         margin-top: var(--space-xs);
         padding: var(--space-xxs);

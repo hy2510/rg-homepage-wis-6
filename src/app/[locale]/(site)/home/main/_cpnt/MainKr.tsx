@@ -35,6 +35,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import useTranslation from '@/localization/client/useTranslations'
 import { HomeMainQuickMenu, HomeMainQuickMenuItem } from '@/ui/modules/home-main-components/home-main-quick-menu'
+import HiDodoBannerAni from '@/ui/modules/HiDodoBannerAni'
 
 const STYLE_ID = 'page_main'
 
@@ -96,8 +97,9 @@ function MainComponent({ platform }: { platform: string }) {
             <LogIn isLogin={isLogin} onClick={onClickMainLoginButton} />
             <Link href='https://gohidodo.com/' target='_blank'>
               <div className={style.hi_dodo_banner}>
-                <Image src='/src/images/@home/hi-dodo-banner/text.svg' width={240} height={32} alt='' style={{width: '180px', height: 'auto'}} />
-                <Image src='/src/images/@home/hi-dodo-banner/hidodo_icon.png' width={50} height={50} alt='' style={{width: '50px', height: 'auto'}} />
+                <HiDodoBannerAni />
+                {/* <Image src='/src/images/@home/hi-dodo-banner/text.svg' width={240} height={32} alt='' style={{width: '180px', height: 'auto'}} />
+                <Image src='/src/images/@home/hi-dodo-banner/hidodo_icon.png' width={50} height={50} alt='' style={{width: '50px', height: 'auto'}} /> */}
               </div>
             </Link>
           </div>

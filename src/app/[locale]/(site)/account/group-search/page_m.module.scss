@@ -218,6 +218,7 @@
 // 그룹회원 탭
 .group_search_box {
   width: calc(100% - 40px);
+  max-width: 400px;
   min-height: 400px;
   background-color: var(--white);
   border-radius: var(--round-l);
@@ -226,7 +227,8 @@
   display: flex;
   flex-direction: column;
   padding: var(--space-m);
-  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  // box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--gray3);
   gap: var(--space-m);
   @media (prefers-color-scheme: no-preference) {
     background-color: #0c0541;

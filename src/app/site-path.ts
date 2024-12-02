@@ -48,6 +48,7 @@ const ACCOUNT = {
   INFO: '/account/account-info',
   CHANGE_PASSWORD: '/account/change-password',
   SIGN_IN_PORTAL: '/account/sign-in-portal',
+  GROUP_MOVE_CLASS: '/account/group-move-class',
   GROUP_SEARCH: '/account/group-search',
 }
 const BASIC = {
