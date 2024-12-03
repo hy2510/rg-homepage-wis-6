@@ -485,6 +485,11 @@ export function BookInfoModal({
 
   const [viewVocaPrintOptions, setViewVocaPrintOptions] = useState(false)
 
+   // 우클릭 기본 동작 막기
+  const handleContextMenu = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.preventDefault();
+  };
+
   if (isBookInfoInitLoading || error) {
     return (
       <Modal
@@ -661,7 +666,7 @@ export function BookInfoModal({
                 <div className={style.book}>
                   <div className={style.book_container}>
                     {bookInfo.animationPath ? (
-                      <div className={style.movie_player}>
+                      <div className={style.movie_player} onContextMenu={handleContextMenu}>
                         <video
                           ref={videoRef}
                           poster={bookImgSrc}

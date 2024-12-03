@@ -115,6 +115,7 @@ function MainComponent({ platform }: { platform: string }) {
           </div>
         </div>
         <HomeMainQuickMenu label='Quick Menu'>
+          <HomeMainQuickMenuItem title='About Reading Gate' href='/home/about-global' bgColor='#D9F8FF' imgSrc='/src/images/@home/img_post_card_bg_default.svg' />
           <HomeMainQuickMenuItem title='How to Use' href='/home/user-guide' bgColor='#E8EBED' imgSrc='/src/images/@home/quick-menu-icon/find.png' />
           <HomeMainQuickMenuItem title='Ranking' href='/ranking' bgColor='#FFF3BB' imgSrc='/src/images/@home/quick-menu-icon/star.png' />
           <HomeMainQuickMenuItem title='New Books' href='/home/main/rg-news/new-contents/' bgColor='#D9F8FF' imgSrc='/src/images/@home/quick-menu-icon/new_book.png' />
@@ -135,6 +136,7 @@ function MainComponent({ platform }: { platform: string }) {
             })}
           </RgNewsTable>
           <div className={style.col_1}>
+            <HomeBanner title='Gallery' bgImage='/src/images/@home/cards/gallery.png' href='' />
             <AdBannerType1
               title={''}
               href={'/home/main/rg-news/new-contents/'}
@@ -142,7 +144,13 @@ function MainComponent({ platform }: { platform: string }) {
               width={640}
               height={640}
             />
-            <AdBannerType1
+          </div>
+        </div>
+        <div className={style.row_5}>
+          <HomeBanner title='About Reading Gate' comment='Welcome to the Reading Gate! A Happy Habit Opening the Future!' bgImage='/src/images/@home/img_post_card_bg_default.svg' href='/home/about-global' />
+          <HomeBanner title='How to Use' comment='It’s not difficult. Follow the steps carefully and start learning!' bgImage='/src/images/@home/cards/how_to_use.svg' href='/home/user-guide' />
+          <HomeBanner title='Ranking' comment='The joy of growing together with friends!' bgImage='/src/images/@home/cards/ranking.png' href='/ranking' />
+          <AdBannerType1
               title={''}
               href={'https://blog.naver.com/readinggate_official/223396684842'}
               target='_blank'
@@ -150,13 +158,6 @@ function MainComponent({ platform }: { platform: string }) {
               width={640}
               height={640}
             />
-          </div>
-        </div>
-        <div className={style.row_5}>
-          <HomeBanner title='About Reading Gate' comment='Welcome to the Reading Gate! A Happy Habit Opening the Future!' bgImage='/src/images/@home/img_post_card_bg_default.svg' href='/home/about-to-school' />
-          <HomeBanner title='How to Use' comment='It’s not difficult. Follow the steps carefully and start learning!' bgImage='/src/images/@home/cards/how_to_use.svg' href='/home/user-guide' />
-          <HomeBanner title='Ranking' comment='The joy of growing together with friends!' bgImage='/src/images/@home/cards/ranking.png' href='/ranking' />
-          <HomeBanner title='Gallery' bgImage='/src/images/@home/cards/gallery.png' href='' />
         </div>
         <div className={style.row_6}>
           <HomeCustomerCenterGlobal />

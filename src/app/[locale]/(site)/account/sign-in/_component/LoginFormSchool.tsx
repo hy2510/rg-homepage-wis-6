@@ -15,6 +15,7 @@ import { useFetchFindIdWithClassAndStudentName } from '@/client/store/account/fo
 import { ClassListResponse } from '@/repository/client/account/class-list'
 import { Button, Nav, NavItem, TextField } from '@/ui/common/common-components'
 import { useStyle } from '@/ui/context/StyleContext'
+import MoveClass from './MoveClass'
 
 const STYLE_ID = 'page_sign_in'
 
@@ -155,6 +156,7 @@ export default function LoginFormSchool({
       : !classGroup || !classOne || !userName || !password
   return (
     <>
+      <MoveClass />
       <div className={style.log_in_box}>
         {isAvailableClassLogin && (
           <Nav>

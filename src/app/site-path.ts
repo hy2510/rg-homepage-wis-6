@@ -37,6 +37,7 @@ const HOME = {
   USER_GUIDE_VN: '/home/user-guide-vn',
   ABOUT_TO_SCHOOL: '/home/about-to-school',
   ABOUT_VN: '/home/about-vn',
+  ABOUT_GLOBAL: '/home/about-global',
 }
 const ACCOUNT = {
   MAIN: '/account/account-list',

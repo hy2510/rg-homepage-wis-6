@@ -107,6 +107,8 @@ import page_about_to_school from '@/app/[locale]/(site)/home/about-to-school/pag
 import page_about_to_school_m from '@/app/[locale]/(site)/home/about-to-school/page_m.module.scss'
 import page_about_vn from '@/app/[locale]/(site)/home/about-vn/page.module.scss'
 import page_about_vn_m from '@/app/[locale]/(site)/home/about-vn/page_m.module.scss'
+import page_about_global from '@/app/[locale]/(site)/home/about-global/page.module.scss'
+import page_about_global_m from '@/app/[locale]/(site)/home/about-global/page_m.module.scss'
 import page_interview from '@/app/[locale]/(site)/home/customer-review/interview/page.module.scss'
 import page_interview_m from '@/app/[locale]/(site)/home/customer-review/interview/page_m.module.scss'
 import page_customer_review from '@/app/[locale]/(site)/home/customer-review/page.module.scss'
@@ -406,6 +408,8 @@ export default function findStyle(id: string): {
       return { pc: page_about_to_school, mobile: page_about_to_school_m }
     case 'page_about_vn':
       return { pc: page_about_vn, mobile: page_about_vn_m }
+    case 'page_about_global':
+      return { pc: page_about_global, mobile: page_about_global_m }
     case 'page_group_search':
       return { pc: page_group_search, mobile: page_group_search_m }
     case 'page_group_move_class':
