@@ -5,7 +5,9 @@ const CATALOG = {
   BASIC: '/catalog/dodo-abc',
   EBOOK: '/catalog/ebook',
   PBOOK_QUIZ: '/catalog/pbook-quiz',
-  LEVEL_MASTER: '/catalog/level-master',
+  MOTIVATION: '/catalog/motivation',
+  MOVIE_CONTENTS: '/catalog/movie-contents',
+  AI_SPEAK: '/catalog/ai-speak',
 }
 
 const HOME = {

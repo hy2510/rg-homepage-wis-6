@@ -49,6 +49,6 @@ csslist.ts.txt
 .env*
 
 # 카탈로그 (랜딩페이지 작업중)
-catalog/
-@about/
-videos/
+# catalog/
+# @about/
+# videos/

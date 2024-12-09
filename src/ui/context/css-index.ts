@@ -184,8 +184,8 @@ import page_quick_view_m from '@/app/[locale]/(site)/review/quick-view/page_m.mo
 import page_detailed_view from '@/app/[locale]/(site)/review/detailed-view/page.module.scss'
 import page_detailed_view_m from '@/app/[locale]/(site)/review/detailed-view/page_m.module.scss'
 import page_trial from '@/app/[locale]/(site)/trial/page.module.scss'
-// import page_catalog from '@/app/[locale]/(site)/catalog/page.module.scss'
-// import page_catalog_m from '@/app/[locale]/(site)/catalog/page_m.module.scss'
+import page_catalog from '@/app/[locale]/(site)/catalog/page.module.scss'
+import page_catalog_m from '@/app/[locale]/(site)/catalog/page_m.module.scss'
 
 export type CssStyle = { readonly [key: string]: string }
 export default function findStyle(id: string): {
@@ -414,8 +414,8 @@ export default function findStyle(id: string): {
       return { pc: page_group_search, mobile: page_group_search_m }
     case 'page_group_move_class':
       return { pc: page_group_move_class, mobile: page_group_move_class_m }
-    // case 'page_catalog':
-    //   return { pc: page_catalog, mobile: page_catalog_m }
+    case 'page_catalog':
+      return { pc: page_catalog, mobile: page_catalog_m }
     default:
       throw new Error('CSS Index Not Found.')
   }

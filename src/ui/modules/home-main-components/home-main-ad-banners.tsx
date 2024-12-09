@@ -355,7 +355,7 @@ export const HomeBannerRgMembershipVn = () => {
     <AdBannerType4>
       <div className={`${style.home_banner} ${style.bg_top}`} style={{backgroundImage: `url('/src/images/@home/payment/symbol.png')`}}>
         <div>
-          <div className={style.title}>RG Thành viên</div>
+          <div className={style.title}>RG MEMBERSHIP</div>
           {/* <div className={style.link} onClick={() => {
             viewModal ? _viewModal(false) : _viewModal(true)
           }}>할인 혜택 보기</div> */}
@@ -418,13 +418,13 @@ export const HomeBannerRgMembershipVn = () => {
           <Link href='/home/rg-membership/payment/purchase'>
             <div className={style.option_button}>
               <Image src='/src/images/@home/payment/subscription.svg' width={20} height={20} alt='' />
-              <span>Mua gói dịch vụ</span>
+              <span>Mua Quyền sử dụng</span>
             </div>
           </Link>
           <Link href='/home/rg-membership/payment/ticket'>
             <div className={style.option_button}>
               <Image src='/src/images/@home/payment/ticket.svg' width={20} height={20} alt='' />
-              <span>Đăng ký vé</span>
+              <span>Kích hoạt voucher</span>
             </div>
           </Link>
         </div>

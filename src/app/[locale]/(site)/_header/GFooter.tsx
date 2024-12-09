@@ -92,6 +92,7 @@ function PrivateFooter() {
         <Link href={SITE_PATH.ACCOUNT.GROUP_SEARCH}>
           <div>{t('t259') + ' ' + t('t231')}</div>
         </Link>
+        <Link href={'/catalog'}>Catalog</Link>
         <Link
           href={'https://util.readinggate.com/about_Rg/b2b/'}
           target="_blank">

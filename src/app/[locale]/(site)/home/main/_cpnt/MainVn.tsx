@@ -99,7 +99,7 @@ function MainComponent({ platform }: { platform: string }) {
           <HomeMainQuickMenuItem title='Hướng dẫn học' href='/home/user-guide-vn' bgColor='#E8EBED' imgSrc='/src/images/@home/quick-menu-icon/find.png' />
           <HomeMainQuickMenuItem title='Ranking' href='/ranking' bgColor='#FFF3BB' imgSrc='/src/images/@home/quick-menu-icon/star.png' />
           <HomeMainQuickMenuItem title='New Books' href='/home/main/rg-news/new-contents/' bgColor='#D9F8FF' imgSrc='/src/images/@home/quick-menu-icon/new_book.png' />
-          <HomeMainQuickMenuItem title='Mua gói dịch vụ' href='/home/rg-membership/payment/purchase' bgColor='#D8F6E5' imgSrc='/src/images/@home/quick-menu-icon/payment.png' />
+          <HomeMainQuickMenuItem title='Mua Quyền sử dụng' href='/home/rg-membership/payment/purchase' bgColor='#D8F6E5' imgSrc='/src/images/@home/quick-menu-icon/payment.png' />
         </HomeMainQuickMenu>
         <div className={style.row_3}>
           <RgNewsTable>
