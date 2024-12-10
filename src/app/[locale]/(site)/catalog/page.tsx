@@ -54,7 +54,10 @@ const Section1 = () => {
         </div>
         <div className={style.app_link_group}>
           <Link href={'/home/main'}>
-            <div className={style.btn}>Web</div>
+            <div className={style.btn}>
+              <Image src='/src/images/@about/section01/img_pc.svg' width={23} height={28} alt="" />
+              <span>PC</span>
+            </div>
           </Link>
           <Link href={'https://play.google.com/store/apps/details?id=com.a1edu.readinggate&pcampaignid=web_share'} target="_blank">
             <div className={style.btn}>
