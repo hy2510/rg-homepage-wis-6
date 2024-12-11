@@ -67,7 +67,7 @@ export default function Page() {
           exp2: '(질문에 맞는 알맞은 답을 고르기)',
         },
         {
-          name: 'STEP04 서머리 평가',
+          name: 'STEP04 써머리',
           imgSrc: '/src/images/@about/@pbook-quiz/row2_1_step04.png',
           exp1: 'Summary Test',
           exp2: '(책 내용의 흐름에 맞게 문장을 나열하기)',
@@ -96,7 +96,7 @@ export default function Page() {
           exp2: '(단어의 뜻을 보고 단어를 입력하기)',
         },
         {
-          name: 'STEP03 서머리 평가',
+          name: 'STEP03 써머리',
           imgSrc: '/src/images/@about/@pbook-quiz/row3_2_step03_1.png',
           exp1: 'Summary Test',
           exp2: '(책 내용의 흐름에 맞춰 문장을 나열하기)',

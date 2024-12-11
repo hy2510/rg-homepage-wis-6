@@ -47,7 +47,7 @@ export default function Page() {
           imgSrc: ['/src/images/@about/@ebook/row2_1c_1.png', '/src/images/@about/@ebook/row2_1c_2.png', '/src/images/@about/@ebook/row2_1c_3.png'],
         },
       ],
-      exp: '코믹북, 세계 명작, 유명 원서(Milly and Molly), 동물 등 다양한 종류의 책으로 구성되어 있습니다. 조금 더 복잡한 문장과 다양한 표현이 등장하며, 스토리의 흐름을 따라 자연스럽게 문맥을 파악할 수 있도록 제작되었습니다.',
+      exp: '코믹북, 세계 명작, 유명 원서, 논픽션 등 다양한 종류의 책으로 구성되어 있습니다. 조금 더 복잡한 문장과 다양한 표현이 등장하며, 스토리의 흐름을 따라 자연스럽게 문맥을 파악할 수 있도록 제작되었습니다.',
     },
     {
       imgSrc: '/src/images/@about/@ebook/row3_2a.gif',

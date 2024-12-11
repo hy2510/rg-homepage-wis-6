@@ -241,8 +241,8 @@ $container_max_width: 1168px;
   color: var(--white);
   // background-color: #EBF5FF;
   background-image: url('/src/images/@about/section02/vanishing-stripes.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  // background-repeat: no-repeat;
+  // background-size: cover;
   background-position: center;
   .hero_text {
     margin-top: 360px;
@@ -299,6 +299,7 @@ $container_max_width: 1168px;
         align-items: center;
         justify-content: center;
         color: #fff;
+        font-size: 0.9em;
         font-weight: 500;
         background-image: url('/src/images/@about/section02/img_laurel_wreath_bg.svg');
         background-size: contain;

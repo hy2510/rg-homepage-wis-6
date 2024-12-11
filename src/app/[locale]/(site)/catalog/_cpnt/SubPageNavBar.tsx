@@ -81,14 +81,14 @@ export default function SubPageNavBar() {
         <a href={SITE_PATH.CATALOG.PBOOK_QUIZ}>
             <div ref={menuRef1} className={`${style.nav_item} ${pathname.indexOf(SITE_PATH.CATALOG.PBOOK_QUIZ) != -1 && style.active}`}>영어 원서 북퀴즈</div>    
         </a>
-        <a href={SITE_PATH.CATALOG.MOTIVATION}>
-            <div ref={menuRef2} className={`${style.nav_item} ${pathname.indexOf(SITE_PATH.CATALOG.MOTIVATION) != -1 && style.active}`}>학습 동기부여</div>
-        </a>
         <a href={SITE_PATH.CATALOG.MOVIE_CONTENTS}>
             <div ref={menuRef3} className={`${style.nav_item} ${pathname.indexOf(SITE_PATH.CATALOG.MOVIE_CONTENTS) != -1 && style.active}`}>영상 콘텐츠</div>
         </a>
         <a href={SITE_PATH.CATALOG.AI_SPEAK}>
             <div ref={menuRef4} className={`${style.nav_item} ${pathname.indexOf(SITE_PATH.CATALOG.AI_SPEAK) != -1 && style.active}`}>AI SPEAK</div>
+        </a>
+        <a href={SITE_PATH.CATALOG.MOTIVATION}>
+            <div ref={menuRef2} className={`${style.nav_item} ${pathname.indexOf(SITE_PATH.CATALOG.MOTIVATION) != -1 && style.active}`}>학습 동기부여</div>
         </a>
     </div>
   )

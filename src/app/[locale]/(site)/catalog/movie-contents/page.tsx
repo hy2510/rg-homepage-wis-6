@@ -18,12 +18,12 @@ export default function Page() {
     {
       imgSrc: '/src/images/@about/@movie-contents/thumbnail/001.png',
       title: '무비북',
-      exp: '영어를 처음 접하는 학습자들이 영어를 친숙하고 즐겁게 접근할 수 있도록, 낮은 레벨에서 선별한 400여 편의 원서들을 무비북으로 만들었습니다. 책 읽기와 병행하여 Listening에도 활용할 수 있습니다.',
+      exp: '영어를 처음 접하는 학습자들이 영어를 친숙하고 즐겁게 접근할 수 있도록 낮은 레벨에서 선별한 400여 편의 원서들을 무비북으로 만들었습니다. 책 읽기와 병행하여 Listening에도 활용할 수 있습니다.',
     },
     {
       imgSrc: '/src/images/@about/@movie-contents/thumbnail/002.png',
-      title: '코믹애니북',
-      exp: '국내 유명 웹툰작가들과 함께 신나는 모험과 우정 등을 다룬코믹애니 시리즈들은 문자, 그림, 애니메이션, 음성 등을 통한 생생하고 사실적인 언어사용으로 영어 학습 효과를 높일수 있습니다.',
+      title: '코믹 애니북',
+      exp: '국내 유명 웹툰작가들과 함께 신나는 모험과 우정 등을 다룬 코믹 애니 시리즈들은 문자, 그림, 애니메이션, 음성 등을 통한 생생하고 사실적인 언어 사용으로 영어 학습 효과를 높일수 있습니다.',
     },
     {
       imgSrc: '/src/images/@about/@movie-contents/thumbnail/003.png',
@@ -32,13 +32,13 @@ export default function Page() {
     },
     {
       imgSrc: '/src/images/@about/@movie-contents/thumbnail/004.png',
-      title: '캐릭터스토리',
-      exp: '마법 소녀 도도가 먼나먼 행성의 왕자 에드몽을 만나기 위해 여행을 하면서 친구들을 사귀고 여러 에피소드들을 겪는 이야기가 펼쳐집니다.',
+      title: '캐릭터 스토리',
+      exp: '마법 소녀 도도가 먼나먼 행성의 왕자 에드몽을 만나기 위해 여행을 하면서 친구들을 사귀면서 겪는 여러 에피소드들이 펼쳐집니다.',
     },
     {
       imgSrc: '/src/images/@about/@movie-contents/thumbnail/005.png',
-      title: '참여형 액티비티들',
-      exp: '영어를 시작하는 학습자들이 보다 쉽게 영어를 익힐 수 있도록 놀이, 활동과 영어 학습을 접목한 액비티비 콘텐츠들을 제공하여 학습 효과를 높여 주고 있습니다.',
+      title: '풍부한 액티비티',
+      exp: '영어를 시작하는 학습자들이 보다 쉽게 영어를 익힐 수 있도록 놀이 활동과 영어 학습을 접목한 액비티비 콘텐츠들을 제공하여 학습 효과를 높여 주고 있습니다.',
     },
   ]
 

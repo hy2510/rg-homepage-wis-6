@@ -259,8 +259,8 @@ $container_max_width: 640px;
   justify-content: center;
   color: var(--white);
   background-image: url('/src/images/@about/section02/vanishing-stripes.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  // background-repeat: no-repeat;
+  // background-size: cover;
   background-position: center;
   .hero_text {
     margin-top: 180px;

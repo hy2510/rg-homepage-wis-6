@@ -149,8 +149,8 @@ function MainComponent({ platform }: { platform: string }) {
             <HomeBanner title='인포그래픽' txtColor='#fff' sub='학습' subColor='#F880C1' comment='리딩게이트 이용자들은 책을 어떻게, 얼마나 읽고 있을까요?' commentColor='#fff' bgColor='#1E254F' bgImage='/src/images/@home/cards/infographic.svg' href='/home/main/rg-news/newsletter/' />
           </div>
           <AdBannerType3
-            bgImage='/src/images/@home/cards/king_of_reading.svg'
-            href='/home/main/rg-news-post/1654'
+            bgImage='/src/images/@home/cards/king_of_reading_202402.svg'
+            href='/home/main/rg-news/challenge/202402'
           />
         </div>
         <div className={style.row_5}>

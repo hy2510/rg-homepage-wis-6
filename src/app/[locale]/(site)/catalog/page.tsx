@@ -49,7 +49,7 @@ const Section1 = () => {
             <span>문해력 잡는 <b>영어독서</b> 앱</span>
           </div>
           <div className={style.row_3}>
-            비결은 제대로된 <b>다독과 정독!</b>
+            비결은 제대로 된 <b>다독과 정독!</b>
           </div>
         </div>
         <div className={style.app_link_group}>
@@ -92,7 +92,7 @@ const Section2 = () => {
       <div className={style.hero_text}>
         <div className={style.row_1}>
           <div className={style.col_1}>
-            <div className={style.txt_1}>회원 누적 74만명!</div>
+            <div className={style.txt_1}>누적 회원 수 74만명!</div>
             <div className={style.txt_2}>초등학교 영어</div>
           </div>
           <div className={style.col_2}>
@@ -143,7 +143,7 @@ const Section3 = () => {
     <div className={style.section_3}>
       <div className={style.col_1}></div>
       <div className={style.col_2}>
-        <div className={style.txt_1}>영어 실력을 좌우하는 문해력 키우기,</div>
+        <div className={style.txt_1}>영어 실력을 좌우하는 문해력 키우기</div>
         <div className={style.txt_2}>
           <div>‘다독과 정독’이</div>
           <div className={style.dot_box}>
@@ -397,7 +397,7 @@ const Section5 = () => {
     <>
       <div className={style.section_5}>
         <div className={style.row_1}>
-          <div className={style.txt_1}>제대로된 정독 훈련!</div>
+          <div className={style.txt_1}>제대로 된 정독 훈련!</div>
           <div className={style.txt_2}>영어 원서 북퀴즈 6,000편 이상</div>
         </div>
         <Tabs />
@@ -736,9 +736,9 @@ const Section9 = () => {
           <CategoryButton href='/catalog/dodo-abc' img="/src/images/@about/section09/ico_prek_icon.svg" txt_1="기초 영어" txt_2="유치원 ~ 초등 저학년까지" txt_3="207편" etc={false} />
           <CategoryButton href='/catalog/ebook' img="/src/images/@about/section09/ico_ebook_icon.svg" txt_1="오디오 스토리북" txt_2="초등 저학년 ~ 성인까지" txt_3="3,000권 이상" etc={false} />
           <CategoryButton href='/catalog/pbook-quiz' img="/src/images/@about/section09/ico_quiz_icon.svg" txt_1="영어 원서 북퀴즈" txt_2="초등 저학년 ~ 성인까지" txt_3="6,000편 이상" etc={false} />
-          <CategoryButton href='/catalog/motivation' img="/src/images/@about/section09/ico_level_up_icon.svg" txt_1="학습 동기부여" txt_2="수준별 자기주도 학습을 위한" txt_3="학습 동기부여 시스템" etc={true} />
           <CategoryButton href='/catalog/movie-contents' img="/src/images/@about/section09/ico_movie_icon.svg" txt_1="영상 콘텐츠" txt_2="다양한 영어 콘텐츠로" txt_3="즐거운 영어" etc={true} />
           <CategoryButton href='/catalog/ai-speak' img="/src/images/@about/section09/ico_speak_icon.svg" txt_1="AI SPEAK" txt_2="리딩에서 말하기까지 완성하는" txt_3="AI 음성 인식 프로그램" etc={true} />
+          <CategoryButton href='/catalog/motivation' img="/src/images/@about/section09/ico_level_up_icon.svg" txt_1="학습 동기부여" txt_2="수준별 자기주도 학습을 위한" txt_3="학습 동기부여 시스템" etc={true} />
         </div>
       </div>
     </div>
