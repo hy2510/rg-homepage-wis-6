@@ -5,6 +5,11 @@ import RgNewsPostBoard from '@/ui/modules/home-rg-news-components/RgNewsPostBoar
 export default function Layout({ children }: { children?: React.ReactNode }) {
   const post = [
     {
+      id: '202402',
+      title: '2024년 하반기 영어독서왕',
+      url: `${SITE_PATH.HOME.EVENT_CHALLENGE}/202402`,
+    },
+    {
       id: '202401',
       title: '2024년 상반기 영어독서왕',
       url: `${SITE_PATH.HOME.EVENT_CHALLENGE}/202401`,

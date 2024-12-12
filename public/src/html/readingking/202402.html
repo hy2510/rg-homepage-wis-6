@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        // 대상
+        fetch('/src/html/readingking/data/202402/202402_1.json')
+            .then((response) => {
+                if (!response.ok) {
+                throw new Error('Failed to fetch the JSON file');
+                }
+                return response.json();
+            })
+            .then((data) => {
+                const data1 = document.getElementById('data1');
+
+                data.forEach((item) => {
+                const data1li1 = document.createElement('div');
+                data1li1.setAttribute('class', 'td1');
+                data1li1.textContent = `${item.name}`;
+                const data1li2 = document.createElement('div');
+                data1li2.setAttribute('class', 'td2');
+                data1li2.textContent = `${item.customers}`;
+                const data1li3 = document.createElement('div');
+                data1li3.setAttribute('class', 'td3');
+                data1li3.textContent = `${item.point}`;
+                const data1li4 = document.createElement('div');
+                data1li4.setAttribute('class', 'td4');
+                data1li4.textContent = `${item.days}`;
+                const data1li5 = document.createElement('div');
+                data1li5.setAttribute('class', 'td5');
+                data1li5.textContent = `${item.books}`;
+
+                data1.appendChild(data1li1);
+                data1.appendChild(data1li2);
+                data1.appendChild(data1li3);
+                data1.appendChild(data1li4);
+                data1.appendChild(data1li5);
+                });
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        // 최우수상
+        fetch('/src/html/readingking/data/202402/202402_2.json')
+            .then((response) => {
+                if (!response.ok) {
+                throw new Error('Failed to fetch the JSON file');
+                }
+                return response.json();
+            })
+            .then((data) => {
+                const data2 = document.getElementById('data2');
+
+                data.forEach((item) => {
+                const data2li1 = document.createElement('div');
+                data2li1.setAttribute('class', 'td1');
+                data2li1.textContent = `${item.name}`;
+                const data2li2 = document.createElement('div');
+                data2li2.setAttribute('class', 'td2');
+                data2li2.textContent = `${item.customers}`;
+                const data2li3 = document.createElement('div');
+                data2li3.setAttribute('class', 'td3');
+                data2li3.textContent = `${item.point}`;
+                const data2li4 = document.createElement('div');
+                data2li4.setAttribute('class', 'td4');
+                data2li4.textContent = `${item.days}`;
+                const data2li5 = document.createElement('div');
+                data2li5.setAttribute('class', 'td5');
+                data2li5.textContent = `${item.books}`;
+                
+                data2.appendChild(data2li1);
+                data2.appendChild(data2li2);
+                data2.appendChild(data2li3);
+                data2.appendChild(data2li4);
+                data2.appendChild(data2li5);
+                });
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        // 우수상
+        fetch('/src/html/readingking/data/202402/202402_3.json')
+            .then((response) => {
+                if (!response.ok) {
+                throw new Error('Failed to fetch the JSON file');
+                }
+                return response.json();
+            })
+            .then((data) => {
+                const data3 = document.getElementById('data3');
+
+                data.forEach((item) => {
+                const data3li1 = document.createElement('div');
+                data3li1.setAttribute('class', 'td1');
+                data3li1.textContent = `${item.name}`;
+                const data3li2 = document.createElement('div');
+                data3li2.setAttribute('class', 'td2');
+                data3li2.textContent = `${item.customers}`;
+                const data3li3 = document.createElement('div');
+                data3li3.setAttribute('class', 'td3');
+                data3li3.textContent = `${item.point}`;
+                const data3li4 = document.createElement('div');
+                data3li4.setAttribute('class', 'td4');
+                data3li4.textContent = `${item.days}`;
+                const data3li5 = document.createElement('div');
+                data3li5.setAttribute('class', 'td5');
+                data3li5.textContent = `${item.books}`;
+                
+                data3.appendChild(data3li1);
+                data3.appendChild(data3li2);
+                data3.appendChild(data3li3);
+                data3.appendChild(data3li4);
+                data3.appendChild(data3li5);
+                });
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        // 성실상
+        fetch('/src/html/readingking/data/202402/202402_4.json')
+            .then((response) => {
+                if (!response.ok) {
+                throw new Error('Failed to fetch the JSON file');
+                }
+                return response.json();
+            })
+            .then((data) => {
+                const data4 = document.getElementById('data4');
+
+                data.forEach((item) => {
+                const data4li1 = document.createElement('div');
+                data4li1.setAttribute('class', 'td1');
+                data4li1.textContent = `${item.name}`;
+                const data4li2 = document.createElement('div');
+                data4li2.setAttribute('class', 'td2');
+                data4li2.textContent = `${item.customers}`;
+                const data4li3 = document.createElement('div');
+                data4li3.setAttribute('class', 'td3');
+                data4li3.textContent = `${item.point}`;
+                const data4li4 = document.createElement('div');
+                data4li4.setAttribute('class', 'td4');
+                data4li4.textContent = `${item.days}`;
+                const data4li5 = document.createElement('div');
+                data4li5.setAttribute('class', 'td5');
+                data4li5.textContent = `${item.books}`;
+                
+                data4.appendChild(data4li1);
+                data4.appendChild(data4li2);
+                data4.appendChild(data4li3);
+                data4.appendChild(data4li4);
+                data4.appendChild(data4li5);
+                });
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        // 학교상
+        fetch('/src/html/readingking/data/202402/202402_5.json')
+            .then((response) => {
+                if (!response.ok) {
+                throw new Error('Failed to fetch the JSON file');
+                }
+                return response.json();
+            })
+            .then((data) => {
+                const data5 = document.getElementById('data5');
+
+                data.forEach((item) => {
+                const data5li1 = document.createElement('div');
+                data5li1.setAttribute('class', 'td1');
+                data5li1.textContent = `${item.customers}`;
+                const data5li2 = document.createElement('div');
+                data5li2.setAttribute('class', 'td2');
+                data5li2.textContent = `${item.point_avg}`;
+                const data5li3 = document.createElement('div');
+                data5li3.setAttribute('class', 'td3');
+                data5li3.textContent = `${item.point_total}`;
+                const data5li4 = document.createElement('div');
+                data5li4.setAttribute('class', 'td4');
+                data5li4.textContent = `${item.books}`;
+                
+                data5.appendChild(data5li1);
+                data5.appendChild(data5li2);
+                data5.appendChild(data5li3);
+                data5.appendChild(data5li4);
+                });
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+    </script>
+</head>
+<body>
+    <div class="post">
+        <div class="image-container">
+            <img src="image/ReadingKing202402/001.png" alt="">
+        </div>
+        <!-- 대상 -->
+        <div id="award1" class="nav-bar">
+            <div><a href="#award1" class="active">대상</a></div>
+            <div><a href="#award2">최우수상</a></div>
+            <div><a href="#award3">우수상</a></div>
+            <div><a href="#award4">성실상</a></div>
+        </div>
+        <div class="image-container">
+            <img src="image/ReadingKing202402/002.png" alt="">
+        </div>
+        <div class="comment-container bg-orange">
+            <span>명단은 '포인트 > 학습일수 > 학습권수' 순으로 정리되었으니 참고바랍니다.</span>
+            <span>대회 기간동안 학습한 포인트, 학습일수, 학습권수와 본인의 이름 정보로 확인하시기 바랍니다.</span>
+        </div>
+        <div class="award-container bg-orange">
+            <div class="table-header bg-orange-2">
+                <div class="th-item text-white">이름</div>
+                <div class="th-item text-white">고객사</div>
+                <div class="th-item text-white">포인트</div>
+                <div class="th-item text-white">학습일수</div>
+                <div class="th-item text-white">학습권수</div>
+            </div>
+            <div id="data1" class="data-table"></div>
+        </div>
+        <!-- 최우수상 -->
+        <div id="award2" class="nav-bar">
+            <div><a href="#award1">대상</a></div>
+            <div><a href="#award2" class="active">최우수상</a></div>
+            <div><a href="#award3">우수상</a></div>
+            <div><a href="#award4">성실상</a></div>
+        </div>
+        <div class="image-container">
+            <img src="image/ReadingKing202402/003.png" alt="">
+        </div>
+        <div class="comment-container bg-green">
+            <span>명단은 '포인트 > 학습일수 > 학습권수' 순으로 정리되었으니 참고바랍니다.</span>
+            <span>대회 기간동안 학습한 포인트, 학습일수, 학습권수와 본인의 이름 정보로 확인하시기 바랍니다.</span>
+        </div>
+        <div class="award-container bg-green">
+            <div class="table-header bg-green-2">
+                <div class="th-item text-white">이름</div>
+                <div class="th-item text-white">고객사</div>
+                <div class="th-item text-white">포인트</div>
+                <div class="th-item text-white">학습일수</div>
+                <div class="th-item text-white">학습권수</div>
+            </div>
+            <div id="data2" class="data-table"></div>
+        </div>
+        <!-- 우수상 -->
+        <div id="award3" class="nav-bar">
+            <div><a href="#award1">대상</a></div>
+            <div><a href="#award2">최우수상</a></div>
+            <div><a href="#award3" class="active">우수상</a></div>
+            <div><a href="#award4">성실상</a></div>
+        </div>
+        <div class="image-container">
+            <img src="image/ReadingKing202402/004.png" alt="">
+        </div>
+        <div class="comment-container bg-olive">
+            <span>명단은 '포인트 > 학습일수 > 학습권수' 순으로 정리되었으니 참고바랍니다.</span>
+            <span>대회 기간동안 학습한 포인트, 학습일수, 학습권수와 본인의 이름 정보로 확인하시기 바랍니다.</span>
+        </div>
+        <div class="award-container bg-olive">
+            <div class="table-header bg-olive-2">
+                <div class="th-item text-white">이름</div>
+                <div class="th-item text-white">고객사</div>
+                <div class="th-item text-white">포인트</div>
+                <div class="th-item text-white">학습일수</div>
+                <div class="th-item text-white">학습권수</div>
+            </div>
+            <div id="data3" class="data-table"></div>
+        </div>
+        <!-- 성실상 -->
+        <div id="award4" class="nav-bar">
+            <div><a href="#award1">대상</a></div>
+            <div><a href="#award2">최우수상</a></div>
+            <div><a href="#award3">우수상</a></div>
+            <div><a href="#award4" class="active">성실상</a></div>
+        </div>
+        <div id="award4"></div>
+        <div class="image-container">
+            <img src="image/ReadingKing202402/005.png" alt="">
+        </div>
+        <div class="comment-container bg-brown">
+            <span>명단은 '포인트 > 학습일수 > 학습권수' 순으로 정리되었으니 참고바랍니다.</span>
+            <span>대회 기간동안 학습한 포인트, 학습일수, 학습권수와 본인의 이름 정보로 확인하시기 바랍니다.</span>
+        </div>
+        <div class="award-container bg-brown">
+            <div class="table-header bg-brown-2">
+                <div class="th-item text-white">이름</div>
+                <div class="th-item text-white">고객사</div>
+                <div class="th-item text-white">포인트</div>
+                <div class="th-item text-white">학습일수</div>
+                <div class="th-item text-white">학습권수</div>
+            </div>
+            <div id="data4" class="data-table"></div>
+        </div>
+        <!-- 학교상 -->
+        <div class="image-container">
+            <img src="image/ReadingKing202402/006.png" alt="">
+        </div>
+        <div class="comment-container bg-purple">
+            <span>명단은 1인당 평균 포인트순으로 정리되었으니 참고하시기 바랍니다.</span>
+        </div>
+        <div class="award-container bg-purple">
+            <div class="table-header school bg-purple-2">
+                <div class="th-item text-white">학교</div>
+                <div class="th-item text-white">1인당 평균 포인트</div>
+                <div class="th-item text-white">총 포인트</div>
+                <div class="th-item text-white">총 학습권수</div>
+            </div>
+            <div id="data5" class="school-data-table"></div>
+        </div>
+    </div>
+    
+</body>
+</html>

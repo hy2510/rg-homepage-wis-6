@@ -1,0 +1,192 @@
+.post {
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 0.95em;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 600px) {
+    .post {
+        min-height: 3800px;
+    }
+}
+
+.nav-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: #000;
+}
+
+.nav-bar div {
+    padding: 10px;
+    background-color: #1a1a1a;
+    font-size: 1.2em;
+    font-weight: 600;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .nav-bar div {
+        font-size: 0.8em;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+a.active {
+    color: #fff;
+}
+
+.data-table {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5px;
+    background-color: #d2d2d2;
+    border: 0.5px solid #d2d2d2;
+    border-top: none;
+    margin: 10px;
+    margin-top: 0;
+}
+
+.td1, 
+.td2,
+.td3,
+.td4,
+.td5 {
+    padding: 8px 0;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.image-container img {
+    width: 100%;
+    display: block;
+}
+
+.award-container {
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+@media (max-width: 600px) {
+    .award-container {
+        max-height: 400px;
+        font-size: 0.5em;
+    }
+}
+
+.award-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.award-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 100px;
+}
+
+.award-container::-webkit-scrollbar-thumb {
+    background: #000;
+    border-radius: 100px;
+}
+
+.school-data-table {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5px;
+    background-color: #d2d2d2;
+    border: 0.5px solid #d2d2d2;
+    border-top: none;
+    margin: 10px;
+    margin-top: 0;
+}
+
+.comment-container {
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 20px;
+    padding-top: 20px;
+}
+
+.comment-container span {
+    width: 100%;
+    max-width: 700px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    .comment-container span {
+        font-size: 0.8em;
+    }
+}
+
+
+.bg-orange {
+    background-color: #ED7B2E;
+}
+
+.bg-orange-2 {
+    background-color: #FFAA1F;
+}
+
+.bg-green {
+    background-color: #318741;
+}
+
+.bg-green-2 {
+    background-color: #38B52D;
+}
+
+.bg-olive {
+    background-color: #7A982F;
+}
+
+.bg-olive-2 {
+    background-color: #9CC830;
+}
+
+.bg-brown {
+    background-color: #CFB42B;
+}
+
+.bg-brown-2 {
+    background-color: #9E7326;
+}
+
+.bg-purple {
+    background-color: #6A3989;
+}
+
+.bg-purple-2 {
+    background-color: #7E2CB6;
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+.table-header {
+    position: sticky;
+    top: 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5px;
+    margin: 10px;
+    margin-bottom: 0;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.table-header.school {
+    grid-template-columns: repeat(4, 1fr);
+}
