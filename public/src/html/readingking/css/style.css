@@ -4,11 +4,12 @@
     font-size: 0.95em;
     display: flex;
     flex-direction: column;
+    min-height: 6400px;
 }
 
 @media (max-width: 600px) {
     .post {
-        min-height: 3800px;
+        min-height: 3840px;
     }
 }
 
