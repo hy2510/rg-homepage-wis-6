@@ -89,7 +89,7 @@ function MainComponent({ platform }: { platform: string }) {
   return (
     <>
       {/* 띠 베너 */}
-      <NoticeBanner bgColor='#85E7E6'>[초특가 행사] 리딩게이트 1년 이용권 역대급 할인 진행중!</NoticeBanner>
+      <NoticeBanner bgColor='#FF1B45'><div style={{color: 'white'}}>서버 점검에 따른 학습 및 홈페이지 이용 제한 안내<br />12/19(목) 00:00 ~ 12/19(목)06:00</div></NoticeBanner>
       <main className={`${style.home_news_kr} container`}>
         <div className={style.row_1}>
           { mainData.slide.length > 0 && <MainBanner banner={mainData.slide} /> }
