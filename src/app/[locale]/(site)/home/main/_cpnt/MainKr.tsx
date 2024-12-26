@@ -167,7 +167,7 @@ function MainComponent({ platform }: { platform: string }) {
         <div className={style.row_7}>
           <HomeBannerChanner title1='' title2='RG Cafe' linkTxt1='RG에 빠진 가족' link1='https://cafe.naver.com/readinggatecafe?iframe_url=/ArticleList.nhn%3Fsearch.clubid=29561033%26search.menuid=30%26search.boardtype=L' linkTxt2='영어 독서왕 대상 후기' link2='https://cafe.naver.com/readinggatecafe?iframe_url=/ArticleList.nhn%3Fsearch.clubid=29561033%26search.menuid=113%26search.boardtype=L' bgColor='#5B2390' bgImage='/src/images/@home/channer/channer_cafe.svg' />
           <HomeBannerChanner title1='' title2='RG Blog' linkTxt1='RG에 빠진 아이들' link1='https://blog.naver.com/PostList.nhn?blogId=readinggate_official&from=postList&categoryNo=10' linkTxt2='슈퍼스타 수상자 인터뷰' link2='https://blog.naver.com/PostList.naver?blogId=readinggate_official&from=postList&categoryNo=14' bgColor='#2FB44A' bgImage='/src/images/@home/channer/channer_blog.svg' />
-          <HomeBannerChanner title1='' title2='RG Story' linkTxt1='RG인 인터뷰 모아보기' link1='https://www.youtube.com/playlist?list=PLbIV2Wes7jczKZkbqMaIjHgSHwDLEuaFO' bgColor='#222B52' bgImage='/src/images/@home/channer/channer_youtube.svg' />
+          <HomeBannerChanner title1='' title2='RG Instagram' linkTxt1='다양한 소식 모아보기' link1='https://www.instagram.com/readinggate_official/' bgColor='#BF2024' bgImage='/src/images/@home/channer/channer_insta.svg' />
           <HomeBannerDonation link='https://blog.naver.com/readinggate_official/223396684842' bgImage='/src/images/@home/cards/donation_campaign.png' />
         </div>
       </main>
